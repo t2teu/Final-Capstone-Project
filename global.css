@@ -1,0 +1,18 @@
+/* Global CSS for all pages */
+
+* {
+    /* Sizing helper: See Workbook 1b, page 2-33. */
+    box-sizing: border-box;
+
+    /* 
+       Vizualization helper: While styling or debugging your HTML & CSS, 
+       uncomment the rule below to see all the boxes on your page more
+       clearly! (Remove this outline before submitting: users won't 
+       want to see it!)
+    */
+    /* outline: 1px dotted red; */
+}
+
+:root {
+    font-size: 1rem;
+}
