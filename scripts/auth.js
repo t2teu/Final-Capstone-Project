@@ -10,7 +10,8 @@ const apiBaseURL = "https://microbloglite.herokuapp.com";
 // and token, or an empty object if the visitor is not logged in.
 function getLoginData () {
     const loginJSON = window.localStorage.getItem("login-data");
-    return JSON.parse(loginJSON) || {};
+    return JSON.parse(loginJSON) || {}
+        ;
 }
 
 

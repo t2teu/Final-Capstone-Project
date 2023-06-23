@@ -3,7 +3,7 @@
 
 
 📃 Basic Requirements (Adventure Mode)
-        1| Landing/Login Page
+        ✅1| Landing/Login Page
             a. INTRO
                 - Display App Name
                 - Brief description about app
@@ -12,7 +12,7 @@
                 - After login, redirects user to "Posts" Page (refer to .pdf for one-liner to achieve this)
                 - Link to Registration Page
 
-        2| Registration Page
+        ✅2| Registration Page
             a. SIGN UP FORM FEATURE
                 - Perform fetch() request to MicroblogLite API to register user
                 - Redirect user back to Login page for sign-in (refer to .pdf for one-liner to achieve this)
