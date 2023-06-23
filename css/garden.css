@@ -1,0 +1,17 @@
+.post {
+    margin-bottom: 20px;
+  }
+
+  .username {
+    font-weight: bold;
+  }
+
+  .timestamp {
+    color: #888;
+    font-size: 12px;
+  }
+
+  .likes {
+    color: #888;
+    font-size: 12px;
+  }
