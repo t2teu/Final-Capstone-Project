@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+  <title>Amphy 🎶 </title>
 
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="../css/landing.css">
-
-    <title>Login to the Microblog Network!</title>
-
-    <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
-    <script src="../scripts/auth.js"></script>
-    <script>
-        if (isLoggedIn() === true) window.location.replace("garden.html");
-    </script>
+          <!--Connecting CSS-->
+          <link rel="stylesheet" type="text/css" href="/css/style.css">
+          <link rel="stylesheet" type="text/css" href="/css/global.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
-    </header>
+<header>
 
-    <main>
+ 		 <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="/images/AmphyLogo.png" alt="Logo" width="160" height="80"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"> Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html"> Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="posts.html"> Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html"> My Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Contact</a>
+          </li>
+          <button onclick="logout()">Logout</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <form id="login">
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" minlength="3">
-            </div>
+</header>
 
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" minlength="6">
-            </div>
 
-            <button id="loginButton" type="submit">Login</button>
-        </form>
+<footer></footer>
 
-    </main>
+<!-- Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-    <footer></footer>
+<!--Sign Up New User-->
+<script src="/scripts/registration.js"></script>
 
-    <!-- Page-specific code -->
-    <script src="../scripts/landing.js"></script>
+<!--Log Out User-->
+<script src="/scripts/logout.js"></script>
+
 </body>
 </html>
