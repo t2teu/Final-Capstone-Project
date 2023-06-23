@@ -33,7 +33,7 @@
             a. PREVENT ACCESS FEATURE
                 - This page should be inside "walled garden"
                 - If visitor is not logged in, send them back to Login Page.
-            b.   LINK TO POSTS PAGE
+            b. LINK TO POSTS PAGE
                 - ALSO self explainatory, c'mon now 🗿
             c. INCLUDE WORKING LOGOUT BUTTON
                 - Logout() function is provided.
