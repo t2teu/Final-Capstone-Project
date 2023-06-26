@@ -27,29 +27,65 @@ function isLoggedIn() {
 // landing page, in order to process a user's login. READ this code,
 // and feel free to re-use parts of it for other `fetch()` requests
 // you may need to write.
+// function login(loginData) {
+//     // POST /auth/login
+//     const options = { 
+//         method: "POST",
+//         headers: {
+//             // This header specifies the type of content we're sending.
+//             // This is required for endpoints expecting us to send
+//             // JSON data.
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(loginData),
+//     };
+//     return fetch(apiBaseURL + "/auth/login", options)
+//         .then(response => response.json())
+//         .then(loginData => {
+//             window.localStorage.setItem("login-data", JSON.stringify(loginData));
+//             window.location.assign("garden.html");  // redirect
+//             console.log(loginData);
+//             return loginData;
+//         });
+
+// }
 function login(loginData) {
     // POST /auth/login
-    const options = { 
-        method: "POST",
-        headers: {
-            // This header specifies the type of content we're sending.
-            // This is required for endpoints expecting us to send
-            // JSON data.
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginData),
+    const options = {
+      method: "POST",
+      headers: {
+        // This header specifies the type of content we're sending.
+        // This is required for endpoints expecting us to send
+        // JSON data.
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(loginData),
     };
+  
     return fetch(apiBaseURL + "/auth/login", options)
-        .then(response => response.json())
-        .then(loginData => {
-            window.localStorage.setItem("login-data", JSON.stringify(loginData));
-            window.location.assign("garden.html");  // redirect
-            console.log(loginData);
-            return loginData;
-        });
-
-}
-
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Login failed");
+        }
+        return response.json();
+      })
+      .then((loginData) => {
+        console.log(loginData);
+  
+        window.localStorage.setItem("login-data", JSON.stringify(loginData));
+        window.location.assign("/html/garden.html"); // redirect
+  
+        return loginData;
+      })
+      .catch((error) => {
+        console.error("An error occurred during login:", error);
+        document.getElementById("displayNotif").textContent =
+          "Incorrect password or username";
+      })
+    .finally(() => {
+        loginButton.disabled = false; // Re-enable the login button
+     });
+  }
 
 // This is the `logout()` function you will use for any logout button
 // which you may include in various pages in your app. Again, READ this
