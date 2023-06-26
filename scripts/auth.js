@@ -17,7 +17,7 @@ function getLoginData () {
 
 // You can use this function to see whether the current visitor is
 // logged in. It returns either `true` or `false`.
-function isLoggedIn () {
+function isLoggedIn() {
     const loginData = getLoginData();
     return Boolean(loginData.token);
 }
@@ -27,7 +27,7 @@ function isLoggedIn () {
 // landing page, in order to process a user's login. READ this code,
 // and feel free to re-use parts of it for other `fetch()` requests
 // you may need to write.
-function login (loginData) {
+function login(loginData) {
     // POST /auth/login
     const options = { 
         method: "POST",
@@ -54,7 +54,7 @@ function login (loginData) {
 // which you may include in various pages in your app. Again, READ this
 // function and you will probably want to re-use parts of it for other
 // `fetch()` requests you may need to write.
-function logout () {
+function logout() {
     const loginData = getLoginData();
 
     // GET /auth/logout

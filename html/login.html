@@ -28,11 +28,12 @@
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="../scripts/auth.js"></script>
-    <script>
+    <!-- <script>
         if (isLoggedIn() === true) window.location.replace("garden.html");
-    </script>
+    </script> -->
     
   </head>
+  
   <body>
     <main class="container">
       <form class="center" id="login">
@@ -78,5 +79,6 @@
 
     <!-- Page-specific code -->
     <script src="../scripts/landing.js"></script>
+    <script src="../scripts/auth.js"></script>
   </body>
 </html>
