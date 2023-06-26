@@ -4,11 +4,7 @@
 * {
     font-family: 'Roboto', sans-serif;;
 }
-body {
-    background: hsla(2, 100%, 90%, 1);
 
-    background: radial-gradient(circle, hsla(2, 100%, 90%, 1) 0%, hsla(200, 100%, 81%, 1) 100%);
-    }
 
 .container {
     display: flex;
