@@ -22,15 +22,15 @@
             a. ✅ PREVENT ACCESS FEATURE
                 - ✅ This page should be inside "walled garden"
 
-                ✅ If visitor is not logged in, send them back to Login Page.
-                    -Add alert if user tries to access blog
+                - ✅ If visitor is not logged in, send them back to Login Page.
+                    - Add alert if user tries to access blog
             b.✅ LINK TO PROFILE PAGE
                 - It's self explainatory, c'mon now 🗿
             c.✅ INCLUDE WORKING LOGOUT BUTTON
-                - Logout() function is provided
+                - ✅ Logout() function is provided
             d.✅ DISPLAY POSTS
-                - Each posts displays: content, author, and timestamp.
-                - Requires fetch()
+                - ✅ Each posts displays: content, author, and timestamp.
+                - ✅ Requires fetch()
 
         ✅ 4| Profile Page
             a.❌ PREVENT ACCESS FEATURE
