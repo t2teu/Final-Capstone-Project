@@ -18,3 +18,36 @@
 :root {
     font-size: 1rem;
 }
+
+
+.alert-custom {
+    /* Add your custom styles here */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .alert-success-custom {
+    /* Custom styles for success alerts */
+    background-color: #dff0d8;
+    color: #3c763d;
+  }
+
+  .alert-danger-custom {
+    /* Custom styles for danger alerts */
+    background-color: #f2dede;
+    color: #a94442;
+  }
+
+  .alert-warning-custom {
+    /* Custom styles for warning alerts */
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+  }
+
+  .alert-info-custom {
+    /* Custom styles for info alerts */
+    background-color: #d9edf7;
+    color: #31708f;
+  }
