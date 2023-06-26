@@ -28,15 +28,15 @@
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="../scripts/auth.js"></script>
-    <!-- <script>
+    <script>
         if (isLoggedIn() === true) window.location.replace("garden.html");
-    </script> -->
+    </script>
     
   </head>
   
   <body>
     <main class="container">
-      <form class="center" id="login">
+      <form class="center" id="login" name="myLogin">
         <header>
           <h1>Welcome to <code>Amphy!</code></h1>
           <br>
@@ -47,11 +47,13 @@
           >
           <input
             type="text"
+            name="username"
             id="username"
             minlength="3"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-sm"
+            required
           />
         </div>
         <div class="input-group input-group-md mb-3">
@@ -60,11 +62,13 @@
           >
           <input
             type="password"
+            name="password"
             id="password"
             minlength="6"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-sm"
+            required
           />
         </div>
         <a href="signup.html"
@@ -79,6 +83,5 @@
 
     <!-- Page-specific code -->
     <script src="../scripts/landing.js"></script>
-    <script src="../scripts/auth.js"></script>
   </body>
 </html>
