@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    font-size: 16px;
     padding-top: 20px;
   }
   
@@ -13,8 +15,11 @@ body {
     position: relative;
     display: flex;
     justify-content: start;
-    align-items: end;
+    align-items: flex-end;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   #profile-picture {
@@ -22,8 +27,9 @@ body {
     height: 150px;
     border: 5px solid white;
     position: absolute;
-    bottom: -50px;
+    bottom: -75px;
     left: 20px;
+    border-radius: 50%;
   }
   
   .profile-info {
@@ -32,23 +38,48 @@ body {
   
   #handle {
     font-weight: bold;
-    color: gray;
+    color: #555;
   }
   
   #name {
     margin: 0;
+    color: #333;
+    font-size: 24px;
   }
   
   #bio {
     margin-bottom: 0;
+    color: #777;
   }
   
   #stats {
     margin-top: 10px;
+    color: #555;
+  }
+  
+  #following,
+  #followers {
+    font-size: 14px;
+  }
+  
+  #posts {
+    margin-top: 20px;
   }
   
   .post {
     border: 1px solid #ccc;
     border-radius: 5px;
-   
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  footer.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+  }
   
