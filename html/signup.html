@@ -64,49 +64,50 @@
 
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <div class="card bg-light text-black" style="border-radius: 1rem;">
-                  <div class="card-body p-5 text-center">
-                      <div class="mb-md-5 mt-md-4 pb-5">
-                          <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
-                          <p class="text-black-50 mb-5">Please enter your information below to register for an account with Amphy!
-                          </p>
-                          <form id="signUpForm" onsubmit="signUpUser(event)">
-                              <div class="form-outline form-white mb-4">
-                                  <input type="email" id="username" name="username" class="form-control form-control-lg" required/>
-                                  <label class="form-label" for="username">Email</label>
-                              </div>
-                      
-                              <div class="form-outline form-white mb-4">
-                                  <input type="text" id="fullname" name="fullname" class="form-control form-control-lg" required/>
-                                  <label class="form-label" for="fullname">Full Name</label>
-                              </div>
-                      
-                              <div class="form-outline form-white mb-4">
-                                  <input type="password" id="password" name="password" class="form-control form-control-lg" required/>
-                                  <label class="form-label" for="password">Password</label>
-                              </div>
-                      
-                              <div class="form-outline form-white mb-4">
-                                  <input type="password" id="cpassword" name="cpassword" class="form-control form-control-lg" required/>
-                                  <label class="form-label" for="cpassword">Confirm Password</label>
-                              </div>
-                      
-                              <button class="btn btn-warning btn-outline-dark btn-lg px-5" href="signin.html" type="submit">JOIN</button>
-
-                      </form><br><br>
-                      
-                      <div>
-                        <p class="mb-0">Already have an account? <a href="login.html" class="text-black fw-bold">Sign In</a>
-                        </p>
-                      </div>
-
-                      </div>
-                  </div>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-light text-black" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
+              <p class="text-black-50 mb-5">Please enter your information below to register for an account with Amphy!</p>
+              <form id="signUpForm" onsubmit="signUpUser(event)">
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="username" name="username" class="form-control form-control-lg" required/>
+                  <label class="form-label" for="username">Email</label>
+                </div>
+                
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="fullname" name="fullname" class="form-control form-control-lg" required/>
+                  <label class="form-label" for="fullname">Full Name</label>
+                </div>
+                
+                <div class="form-outline form-white mb-4">
+                  <input type="password" id="password" name="password" class="form-control form-control-lg" required/>
+                  <label class="form-label" for="password">Password</label>
+                </div>
+                
+                <div class="form-outline form-white mb-4">
+                  <input type="password" id="cpassword" name="cpassword" class="form-control form-control-lg" required/>
+                  <label class="form-label" for="cpassword">Confirm Password</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required/>
+                  <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to all statements in <a href="#" class="text-black fw-bold">Terms of service</a></label>
+                </div><br>
+                
+                <button class="btn btn-warning btn-outline-dark btn-lg px-5" href="signin.html" type="submit">JOIN</button>
+              </form><br><br>
+              
+              <div>
+                <p class="mb-0">Already have an account? <a href="login.html" class="text-black fw-bold">Sign In</a></p>
               </div>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
   </div>
 </section>
 
