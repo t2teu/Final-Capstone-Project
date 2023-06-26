@@ -1,54 +1,3 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <title>Profile Page</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CDN CSS v5.3.0 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  
-  <!-- External CSS-->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!--Jquery Google CDN-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-  <!--Jquery UI Google CDN-->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-
-</head>
-
-<body>
-  <header>
-    <!-- place navbar here -->
-  </header>
-  <main>
-    <div id="profile">
-        <img src="https://i.redd.it/jspomf69j3e71.jpg" alt="Profile picture">
-        <h2>Ash Ketchup</h2>
-        <p>@ashkatch_them_all</p>
-    </div>
-    
-    <h1>Posts</h1>
-    
-    <div id="posts">
-        <h3>My first post</h3>
-        <p>This is the content of my first post.</p>
-    </div>
-    
-    <div id="posts">
-        <h3>My second post</h3>
-        <p>This is the content of my second post.</p>
-    </div>
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
-
 <!-- Check if user is logged in -->
 <script>
     if(!sessionStorage.getItem('user')) {
@@ -133,16 +82,3 @@
         });
     });
 </script>
-
-  <!-- Bootstrap CDN JavaScript Libraries (Popper v2.11.7 / Bootstrap v5.3.0) -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" 
-  integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
-  </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" 
-  integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
-  </script>
-</body>
-
-</html>
