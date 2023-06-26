@@ -5,37 +5,40 @@
 📃 Basic Requirements (Adventure Mode)
         ✅1| Landing/Login Page
             a. INTRO
-                - Display App Name
+                - ✅Display App Name
                 - Brief description about app
             b. LOGIN FORM FEATURE
                 - Styling
                 ✅ After login, redirects user to "Posts" Page (refer to .pdf for one-liner to achieve this)
-                - Link to Registration Page
+                ✅ Link to Registration Page
 
         ✅2| Registration Page
-            a. SIGN UP FORM FEATURE
-                - Perform fetch() request to MicroblogLite API to register user
-                - Redirect user back to Login page for sign-in (refer to .pdf for one-liner to achieve this)
+            ✅ a. SIGN UP FORM FEATURE
+                ✅ Perform fetch() request to MicroblogLite API to register user
+                ✅ Redirect user back to Login page for sign-in (refer to .pdf for one-liner to achieve this)
+                ✅ Added login button
 
-        3| Posts Page
-            a. PREVENT ACCESS FEATURE
-                - This page should be inside "walled garden"
-                - If visitor is not logged in, send them back to Login Page.
-            b. LINK TO PROFILE PAGE
+       ✅ 3| Posts Page
+            a. ✅ PREVENT ACCESS FEATURE
+                - ✅ This page should be inside "walled garden"
+
+                ✅ If visitor is not logged in, send them back to Login Page.
+                    -Add alert if user tries to access blog
+            b.✅ LINK TO PROFILE PAGE
                 - It's self explainatory, c'mon now 🗿
-            c. INCLUDE WORKING LOGOUT BUTTON
+            c.✅ INCLUDE WORKING LOGOUT BUTTON
                 - Logout() function is provided
-            d. DISPLAY POSTS
+            d.✅ DISPLAY POSTS
                 - Each posts displays: content, author, and timestamp.
                 - Requires fetch()
 
-        4| Profile Page
-            a. PREVENT ACCESS FEATURE
+        ✅ 4| Profile Page
+            a.❌ PREVENT ACCESS FEATURE
                 - This page should be inside "walled garden"
                 - If visitor is not logged in, send them back to Login Page.
-            b.   LINK TO POSTS PAGE
+            b.✅ LINK TO POSTS PAGE
                 - ALSO self explainatory, c'mon now 🗿
-            c. INCLUDE WORKING LOGOUT BUTTON
+            c.✅ INCLUDE WORKING LOGOUT BUTTON
                 - Logout() function is provided.
             d. WORKING FORM FOR CREATING A POST
                 - Requires fetch request

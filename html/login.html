@@ -21,11 +21,14 @@
     <link rel="stylesheet" href="/css/global.css" />
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="/css/landing.css" />
+
+    <!--Prevent Access Feature-->
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="/scripts/auth.js"></script>
     <script>
       if (isLoggedIn() === true) window.location.replace("garden.html");
     </script>
+    <!--Prevent Access Feature -->
   </head>
   <body>
     <header>
