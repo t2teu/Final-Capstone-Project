@@ -9,7 +9,7 @@
                 - Brief description about app
             b. LOGIN FORM FEATURE
                 - Styling
-                - After login, redirects user to "Posts" Page (refer to .pdf for one-liner to achieve this)
+                ✅ After login, redirects user to "Posts" Page (refer to .pdf for one-liner to achieve this)
                 - Link to Registration Page
 
         2| Registration Page

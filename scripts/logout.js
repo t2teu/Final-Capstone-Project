@@ -1,7 +1,4 @@
-"use stirct";
-
-    function logout() {
-        // Here we're just clearing the session and redirecting to login page.
+function logout() {
         sessionStorage.removeItem('user');
         window.location.href = "/html/login.html";
     }
