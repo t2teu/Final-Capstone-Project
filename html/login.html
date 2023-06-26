@@ -29,25 +29,11 @@
   </head>
   <body>
     <header>
-      <!-- Navbar -->
+ 		 <!-- Navbar -->
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img
-              src="/images/AmphyLogo.png"
-              alt="Logo"
-              width="160"
-              height="80"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <a class="navbar-brand" href="index.html"><img src="/images/AmphyLogo.png" alt="Logo" width="160" height="140"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -73,17 +59,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"> Contact</a>
               </li>
-              <button
-                class="btn btn-warning btn-outline-dark btn-sm px-1"
-                onclick="logout()"
-              >
-                Logout
-              </button>
+              <button id="logout" class="btn btn-warning btn-outline-dark btn-sm px-1"  onclick="logout()">Logout</button>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+    
     <main class="container">
       <form class="center" id="login" name="myLogin">
         <header>
