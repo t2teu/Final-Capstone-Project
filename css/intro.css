@@ -30,27 +30,32 @@ html, body {
     background: linear-gradient(to bottom, #000000, #ffffff);
 }
 
+body {
+    overflow-x: hidden;
+  }
+  .container {
+    width: 800px;
+  }
 
-#amphy {
-    font-size: 200px;
-    position: fixed;
-    bottom: 350px;
-    right: 100px;
+#anemone {
+    position: relative;
+    font-size: 100px;
+    margin-top: 75px;
+    margin-left: 570px;
 }
 
 #discuss {
-    position: fixed;
-    font-size: 50px;
+    position: relative;
+    font-size: 40px;
     z-index: 1;
-    bottom: 150px;
-    left: 180px;
+    margin-top: 360px;
+    left: -200px;
     letter-spacing: -3px;
 }
 
-h3 {
-    position: fixed;
-    bottom: 100px;
-    left: 160px;
+#talk {
+    position: relative;
+    left: -220px;
     z-index: 1;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -58,11 +63,46 @@ h3 {
     color: #c9c9c9;
 }
 
+#ocean {
+    position: relative;
+    top: 500px;
+    left: 300px;
+    color: #c9c9c9;
+}
+
+#world {
+    position: relative;
+    top: 1200px;
+    left: -200px;
+    color: #c9c9c9;
+}
+
+#so {
+    position: relative;
+    top: 1900px;
+    left: 800px;
+    color: #c9c9c9;
+}
+
+#what {
+    position: relative;
+    top: 3000px;
+    left: -200px;
+    color: #c9c9c9;
+}
+
+#swim {
+    position: relative;
+    top: 5000px;
+    left: 300px;
+    color: #c9c9c9;
+    font-size: 50px;
+}
+
 body {
     padding-top: 56px; /* Add padding to the top of the body to accommodate the navbar */
 }
 
 .navbar {
-    background-color: transparent;
-    margin-top: 0;
+    margin-left: 100px;
 }
