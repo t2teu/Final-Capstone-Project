@@ -1,0 +1,68 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Overpass Mono';
+    src: url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Overpass Mono', 'sans-serif';
+    color: #e4e4e4;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to bottom, #000000, #ffffff);
+}
+
+
+#amphy {
+    font-size: 200px;
+    position: fixed;
+    bottom: 350px;
+    right: 100px;
+}
+
+#discuss {
+    position: fixed;
+    font-size: 50px;
+    z-index: 1;
+    bottom: 150px;
+    left: 180px;
+    letter-spacing: -3px;
+}
+
+h3 {
+    position: fixed;
+    bottom: 100px;
+    left: 160px;
+    z-index: 1;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    letter-spacing: -2px;
+    color: #c9c9c9;
+}
+
+body {
+    padding-top: 56px; /* Add padding to the top of the body to accommodate the navbar */
+}
+
+.navbar {
+    background-color: transparent;
+    margin-top: 0;
+}
