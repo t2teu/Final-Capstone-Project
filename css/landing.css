@@ -1,24 +1,51 @@
 /* Landing Page CSS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    font-family: 'Roboto', sans-serif;;
+.loginContainer {
+    border-radius: 20px;
+background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
+    filter:drop-shadow(.5rem .5rem 1rem black);
+}
+.loginColumn {
+    padding: 10%;
 }
 
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transform: translate(0, 50%);
+#introDisplay {
+border-radius: 20px 0 0 20px;
+background-image: url("https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+height: 600px; /* You must set a specified height */
+background-size: cover; /* Resize the background image to cover the entire container */
+background-position: center; /* Center the image */
 }
-.center {
-    margin: auto;
-    width: 50%;
-    background-color: rgb(109, 106, 117);
-    padding: 70px;
-    text-align: center;
 
-    color: aliceblue;
+p {
+    text-align: justify;
+}
+
+.animate__animated.animate__slideInLeft {
+    --animate-duration: 2s;
+  }
+
+  /* TYPEWRITE FX */
+
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
   }

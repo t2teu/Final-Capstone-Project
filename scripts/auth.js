@@ -80,7 +80,7 @@ function login(loginData) {
       .catch((error) => {
         console.error("An error occurred during login:", error);
         document.getElementById("displayNotif").textContent =
-          "Incorrect password or username";
+          "Try Again..";
       })
     .finally(() => {
         loginButton.disabled = false; // Re-enable the login button
