@@ -23,3 +23,25 @@ fetch('https://microbloglite.herokuapp.com/api/users/{username}')
       const date = new Date(dateString);
       return date.toLocaleDateString(undefined, options);
     }
+
+      // Like, following & followers
+      let likeCount = 0;
+      let followingCount = 0;
+      let followersCount = 0;
+
+      $(document).ready(function() {
+        $('#likeBtn').click(function() {
+          likeCount += 1;
+          $('#likeCount').text(likeCount);
+        });
+
+        $('#followBtn').click(function() {
+          followingCount += 1;
+          $('#followingCount').text(followingCount);
+        });
+
+        // Function to edit profile goes here
+        $('#editProfileBtn').click(function() {
+          // Handle profile edit
+        });
+      });
