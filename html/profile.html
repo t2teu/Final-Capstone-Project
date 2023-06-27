@@ -67,45 +67,87 @@
       <div class="profile-photo">
         <img src="/images/profile.jpg" alt="Profile Photo" class="rounded-circle" width="50" height="50">
       </div>
-
-      <!-- ... -->
     </nav>
     </header>
   
     <main>
-        <!-- Hero Section -->
-        <section class="hero bg-primary text-white text-center">
-            <div class="container">
-                <h1>Welcome to Your Profile!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non nulla eu sem fringilla auctor.</p>
-            </div>
-        </section>
         
         <!-- Profile Section -->
-        <section class="profile py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <!-- Profile Picture -->
-                        <img class="img-fluid rounded-circle mb-4" src="/images/profile.jpg" alt="Profile Picture">
-                        <!-- Profile Details -->
-                        <h3>Your Name</h3>
-                        <p class="mb-4">Your email: example@example.com</p>
-                        <button class="btn btn-primary" id="editProfileBtn">Edit Profile</button>
-                        <p class="mt-4">Following: <span id="followingCount">0</span></p>
-                        <p>Followers: <span id="followersCount">0</span></p>
-                        <button class="btn btn-primary mt-2" id="followBtn">Follow</button>
+          <section class="h-100 gradient-custom-2">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-9 col-xl-7">
+                  <div class="card">
+                    <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
+                      <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                        <img src="https://i.redd.it/jspomf69j3e71.jpg"
+                          alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                          style="width: 150px; z-index: 1">
+                        <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                          style="z-index: 1;">
+                          Edit profile
+                        </button>
+                      </div>
+                      <div class="ms-3" style="margin-top: 130px;">
+                        <h5>Ash Ketchup</h5>
+                        <p>Emerald City</p>
+                      </div>
                     </div>
-                    <div class="col-lg-8">
-                        <!-- Profile Bio -->
-                        <h2>About Me</h2>
-                        <p id="bioText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non nulla eu sem fringilla auctor.</p>
-                        <button class="btn btn-primary" id="likeBtn">Like</button>
-                        <span id="likeCount">0</span>
+                    <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                      <div class="d-flex justify-content-end text-center py-1">
+                        <div>
+                          <p class="mb-1 h5">253</p>
+                          <p class="small text-muted mb-0">Photos</p>
+                        </div>
+                        <div class="px-3">
+                          <p class="mb-1 h5">1026</p>
+                          <p class="small text-muted mb-0">Followers</p>
+                        </div>
+                        <div>
+                          <p class="mb-1 h5">478</p>
+                          <p class="small text-muted mb-0">Following</p>
+                        </div>
+                      </div>
                     </div>
+                    <div class="card-body p-4 text-black">
+                      <div class="mb-5">
+                        <p class="lead fw-normal mb-1">About</p>
+                        <div class="p-4" style="background-color: #f8f9fa;">
+                          <p class="font-italic mb-1">Pokémon Trainer</p>
+                          <p class="font-italic mb-1">Lives in Emerald City</p>
+                          <p class="font-italic mb-0">Earned 15 gym badges</p>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+                        <p class="lead fw-normal mb-0">Recent photos</p>
+                        <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+                      </div>
+                      <div class="row g-2">
+                        <div class="col mb-2">
+                          <img src="https://i.ytimg.com/vi/eT8kKf6t70c/maxresdefault.jpg"
+                            alt="image 1" class="w-100 rounded-3">
+                        </div>
+                        <div class="col mb-2">
+                          <img src="https://cdn.vox-cdn.com/thumbor/f2bPL4CEtdsSLrGDxd4HKKKO6Gs=/0x0:1920x1080/1200x800/filters:focal(1035x326:1341x632)/cdn.vox-cdn.com/uploads/chorus_image/image/71812214/Ash_Ketchum_World_Champion_Screenshot_4.0.jpg"
+                            alt="image 1" class="w-100 rounded-3">
+                        </div>
+                      </div>
+                      <div class="row g-2">
+                        <div class="col">
+                          <img src="https://i.guim.co.uk/img/media/66e444bff77d9c566e53c8da88591e4297df0896/120_0_1800_1080/master/1800.png?width=1200&height=1200&quality=85&auto=format&fit=crop&s=69b22b4292160faf91cb45ad024fc649"
+                            alt="image 1" class="w-100 rounded-3">
+                        </div>
+                        <div class="col">
+                          <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/pokemon-tv-app/poketoon/poketoon-1660x940-en.png"
+                            alt="image 1" class="w-100 rounded-3">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </section>
     </main>
 
     <!-- Footer -->
@@ -120,7 +162,7 @@
     /dist/js/bootstrap.bundle.min.js" integrity="sha384-kFZi2c8CtvJC+cI2U5K9oPdrxgym13Fp3+V4uhdSZT25KPcXTc3S/2TuYTOEl+M6" crossorigin="anonymous"></script>
 
     <script src="scripts/profile.js"></script>
-  
+    
 </body>
 </html>
 
