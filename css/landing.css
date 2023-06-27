@@ -2,7 +2,7 @@
 
 .loginContainer {
     border-radius: 20px;
-background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
+    background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
     filter:drop-shadow(.5rem .5rem 1rem black);
 }
 .loginColumn {
@@ -10,15 +10,17 @@ background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17
 }
 
 #introDisplay {
-border-radius: 20px 0 0 20px;
-background-image: url("https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-height: 600px; /* You must set a specified height */
-background-size: cover; /* Resize the background image to cover the entire container */
-background-position: center; /* Center the image */
+    border-radius: 20px 0 0 20px;
+    background-image: url("https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    height: 600px; /* You must set a specified height */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
 }
 
 p {
     text-align: justify;
+    
+    font-size: 1.25rem;
 }
 
 .animate__animated.animate__slideInLeft {
