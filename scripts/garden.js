@@ -1,10 +1,34 @@
-// create new post
+// get user token
+function getUserToken() {
+  const loginData = localStorage.getItem('login-data');
+
+  if (loginData) {
+    const parsedData = JSON.parse(loginData);
+    if (parsedData.token) {
+      return parsedData.token;
+    }
+  }
+
+  console.error('User token not found');
+  return 'DEFAULT_TOKEN';
+}
+
+// create a new post
 function createPost(text) {
+  const token = getUserToken();
+  
+  // check if the text exceeds the character limit
+  const characterLimit = 500;
+  if (text.length > characterLimit) {
+    console.error('Post exceeds the character limit');
+    return;
+  }
+
   fetch('https://microbloglite.herokuapp.com/api/posts', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY4Nzc5OTA2MSwiZXhwIjoxNjg3ODg1NDYxfQ.lhb3bxUJRHCedwARv_q8ZF62ZGvPoOwKSVzSlUt_k_s'
+      'Authorization': `Bearer ${token}`
     },
     body: JSON.stringify({ text })
   })
@@ -20,13 +44,36 @@ function createPost(text) {
   });
 }
 
-// get posts from API
+// function to delete a post
+function deletePost(postId) {
+  const token = getUserToken();
+
+  fetch(`https://microbloglite.herokuapp.com/api/posts/${postId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Post deleted:', data);
+    fetchPosts();
+  })
+  .catch(error => {
+    console.error('Error deleting post:', error);
+  });
+}
+
+// function to fetch posts from the API
 function fetchPosts() {
+  const token = getUserToken();
+
   fetch('https://microbloglite.herokuapp.com/api/posts?limit=100000000000&offset=0', {
     method: 'GET',
     headers: {
       'accept': 'application/json',
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY4Nzc5OTA2MSwiZXhwIjoxNjg3ODg1NDYxfQ.lhb3bxUJRHCedwARv_q8ZF62ZGvPoOwKSVzSlUt_k_s'
+      'Authorization': `Bearer ${token}`
     }
   })
   .then(response => response.json())
@@ -34,7 +81,7 @@ function fetchPosts() {
     const postsContainer = document.getElementById('posts');
     postsContainer.innerHTML = '';
 
-// add post data to HTML
+    // add post data to HTML
     if (data && data.length > 0) {
       data.forEach(post => {
         const postElement = document.createElement('div');
@@ -50,6 +97,16 @@ function fetchPosts() {
         const likesElement = document.createElement('div');
         likesElement.className = 'likes';
         likesElement.innerHTML = `Likes: ${post.likes.length}`;
+
+        // display delete button only for posts made from your token
+        if (post.userToken === token) {
+          const deleteButton = document.createElement('button');
+          deleteButton.textContent = 'Delete';
+          deleteButton.addEventListener('click', () => {
+            deletePost(post.id);
+          });
+          postElement.appendChild(deleteButton);
+        }
 
         postElement.appendChild(usernameElement);
         postElement.appendChild(textElement);
