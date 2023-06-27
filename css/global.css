@@ -14,8 +14,9 @@
        uncomment the rule below to see all the boxes on your page more
        clearly! (Remove this outline before submitting: users won't 
        want to see it!)
-    *//
+    */
     /* outline: 1px dotted red; */
+    font-family: 'Overpass Mono', monospace;
 }
 
 /* THIS IS THE STYLE */
@@ -25,6 +26,7 @@
 }
 
 
+
 .nav-link {
   color:#ccc;
 }
@@ -32,7 +34,7 @@
 body {
   color: #ccc;
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(55,50,62,1) 82%);
-    font-family: 'Overpass Mono', monospace;
+  font-family: 'Overpass Mono', monospace;
   }
 
 :root {
