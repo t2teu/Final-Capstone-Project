@@ -2,8 +2,8 @@
 
 .loginContainer {
     border-radius: 20px;
-    background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
-    filter:drop-shadow(.5rem .5rem 1rem black);
+    background: black; 
+    filter: drop-shadow(0 0 1rem black);
 }
 
 .loginColumn {
