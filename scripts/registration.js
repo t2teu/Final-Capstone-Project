@@ -65,6 +65,8 @@ function signUpUser(event) {
     })
     .catch(error => console.log(error)); // handle errors occurring during the request
 }
+
+// alert boxes
 function showAlert(message, alertClass) {
   const alertContainer = document.createElement('div');
   alertContainer.className = `alert alert-custom ${alertClass}`;
