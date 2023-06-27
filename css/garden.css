@@ -83,6 +83,7 @@ h6 {
   margin-right: 5px;
 }
 
-input, textarea {
-  background-color: #d1d1d1;
+#textInput {
+  background-color: #141414;
+  color: #fff;
 }
