@@ -87,3 +87,7 @@ h6 {
   background-color: #141414;
   color: #fff;
 }
+
+#logoutButton{
+  font-family: 'Overpass Mono', monospace;
+}
