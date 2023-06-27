@@ -12,7 +12,7 @@
 
 #introDisplay {
     border-radius: 20px 0 0 20px;
-    background-image: url("/images/amphy_phone.png");
+    background-image: url("/images/anem_phone.png");
     height: auto; /* You must set a specified height */
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
