@@ -20,10 +20,12 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 
+  <!--PREVENT ACCESS FEATURE-->
   <script src="/scripts/auth.js"></script>
   <script>
-    if (isLoggedIn() === true) window.location.replace("garden.html");
+    if (isLoggedIn() === false) window.location.replace("garden.html");
   </script>
+  
 </head>
 
 <body>
