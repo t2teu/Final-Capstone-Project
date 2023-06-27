@@ -12,7 +12,7 @@
 
 #introDisplay {
     border-radius: 20px 0 0 20px;
-    background-image: url("https://images.pexels.com/photos/5077069/pexels-photo-5077069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("/images/amphy_phone.png");
     height: auto; /* You must set a specified height */
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
@@ -51,4 +51,23 @@ p {
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
+  }
+
+  
+
+
+  .counter-wrapper {
+    text-align: center;
+  }
+
+  .counter {
+    font-size: 48px;
+    font-weight: bold;
+    animation: countAnimation 3s linear infinite;
+  }
+
+  @keyframes countAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
   }
