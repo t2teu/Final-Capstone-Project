@@ -13,7 +13,7 @@
 #introDisplay {
     border-radius: 20px 0 0 20px;
     background-image: url("https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    height: 600px; /* You must set a specified height */
+    height: auto; /* You must set a specified height */
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
 }
