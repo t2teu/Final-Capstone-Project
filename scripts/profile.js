@@ -24,24 +24,32 @@ fetch('https://microbloglite.herokuapp.com/api/users/{username}')
       return date.toLocaleDateString(undefined, options);
     }
 
-      // Like, following & followers
-      let likeCount = 0;
-      let followingCount = 0;
-      let followersCount = 0;
+    // Check if the user is logged in
+    if (isLoggedIn()) {
+      // User is logged in, fetch and display user profile data
+      const profileName = document.getElementById("profile-name");
+      const profileLocation = document.getElementById("profile-location");
+      const profileAbout = document.getElementById("profile-about");
+      const profileBio = document.getElementById("profile-bio");
+      const profileBadges = document.getElementById("profile-badges");
 
-      $(document).ready(function() {
-        $('#likeBtn').click(function() {
-          likeCount += 1;
-          $('#likeCount').text(likeCount);
-        });
+      // Fetch user profile data from API or database
+      const userProfileData = {
+          name: "Ash Ketchup",
+          location: "Emerald City",
+          about: "Pokémon Trainer",
+          bio: "Lives in Emerald City",
+          badges: "Earned 15 gym badges"
+      };
 
-        $('#followBtn').click(function() {
-          followingCount += 1;
-          $('#followingCount').text(followingCount);
-        });
-
-        // Function to edit profile goes here
-        $('#editProfileBtn').click(function() {
-          // Handle profile edit
-        });
-      });
+      // Update the profile information
+      profileName.textContent = userProfileData.name;
+      profileLocation.textContent = userProfileData.location;
+      profileAbout.textContent = userProfileData.about;
+      profileBio.textContent = userProfileData.bio;
+      profileBadges.textContent = userProfileData.badges;
+  } else {
+      // User is not logged in, display alert and redirect to login page
+      alert("You must be a User");
+      window.location.replace("login.html");
+  }
