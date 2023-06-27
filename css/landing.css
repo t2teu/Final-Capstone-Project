@@ -1,4 +1,9 @@
 /* Landing Page CSS */
+body {
+  color: #ccc;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(55,50,62,1) 82%);
+  font-family: 'Chivo Mono', monospace;
+  }
 
 .loginContainer {
     border-radius: 20px;
