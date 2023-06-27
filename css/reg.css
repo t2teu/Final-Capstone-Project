@@ -1,0 +1,54 @@
+/* Landing Page CSS */
+
+.loginContainer {
+    border-radius: 20px;
+    background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
+    filter:drop-shadow(.5rem .5rem 1rem black);
+}
+
+.loginColumn {
+    padding: 10%;
+}
+
+#introDisplay {
+    border-radius: 20px 0 0 20px;
+    background-image: url("https://images.pexels.com/photos/5077069/pexels-photo-5077069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: auto; /* You must set a specified height */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
+}
+
+p {
+    text-align: justify;
+    
+    font-size: 1.25rem;
+}
+
+.animate__animated.animate__slideInLeft {
+    --animate-duration: 2s;
+  }
+
+  /* TYPEWRITE FX */
+
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
