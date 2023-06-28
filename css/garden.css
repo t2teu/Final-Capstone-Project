@@ -15,6 +15,18 @@ body {
   font-family: 'Chirp', 'sans-serif';
 }
 
+/*GARDEN COLUMN STYLING*/
+.row {
+  padding: 2%;
+}
+#leftCol {
+  border-right: 1px solid #2f3336;;
+}
+
+#rightCol {
+  border-left: 1px solid #2f3336;;
+}
+
 h1,
 h2,
 h3,
@@ -26,9 +38,9 @@ h6 {
 }
 
 .post {
-  border: 1px solid #2f3336;
-  padding: 10px;
-  margin-bottom: 10px;
+  border-top: 1px solid #2f3336;
+  border-bottom: 1px solid #2f3336;
+  padding: 20px;
 }
 
 .post .username {
@@ -121,3 +133,6 @@ h6 {
   border-radius: 10px;
 }
   
+#textInput {
+  background-color: #141414;
+}

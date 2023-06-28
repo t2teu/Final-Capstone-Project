@@ -17,15 +17,16 @@
 </head>
 
 <body>
-    <button id="logoutButton" onclick="logout()"  class="btn btn-outline-dark">Logout</button>
-    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <!-- Left Section -->
+            <div class="col-md-3 outlineColumn" id="leftCol">
+
                 <!-- Left Navbar -->
                 <div id="leftNavbar" class="grid-container">
                     <div class="col-md-3">
                         <!-- Left Navbar -->
                         <div id="leftNavbar" class="navbar">
+                            <button id="logoutButton" onclick="logout()"  class="btn btn-outline-dark">Logout</button>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
   
@@ -130,8 +131,8 @@
                       </div>
                   </div>
               </div>
-            <div class="col-md-6">
-                <!-- Middle Posts Section -->
+            <!-- Middle Posts Section -->
+            <div class="col-md-6 outlineColumn" id="midCol">
                 <h1>Home</h1>
                 <div class="post-form">
                     <form id="postForm" class="mb-3">
@@ -143,8 +144,8 @@
                 </div>
                 <div id="posts"></div>
             </div>
-            <div class="col-md-3">
-                <!-- Right Trending Section -->
+            <!-- Right Trending Section -->
+            <div class="col-md-3 outlineColumn" id="rightCol">
                 <div id="trendingSection">
                     <h2>Top 50 Songs (USA)</h2>
                     <div id="tracks-container"></div>
@@ -152,7 +153,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script src="../scripts/trending.js"></script>
     <script src="../scripts/garden.js"></script>
