@@ -18,7 +18,7 @@
     <script>
         if (isLoggedIn() === false) window.location.replace("login.html");
     </script>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon/favicon-16x16.png" type="image/x-icon">
 </head>
 
 <body>
@@ -28,12 +28,13 @@
             <div class="col-md-3">
                 <!-- Left Navbar -->
                 <div id="leftNavbar" class="grid-container">
+                    
                     <div class="col-md-3">
                         <!-- Left Navbar -->
                         <div id="leftNavbar" class="navbar">
+                            <img src="../images/white_logo.png" alt="" srcset="" height="150px">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-  
                                 </li>
 
                                 <li class="vertical-nav">
@@ -126,15 +127,20 @@
               </div>
 
               
-            <div class="col-md-6">
-                <!-- Middle Posts Section -->
-                <h1>Home</h1>
+            <!-- Middle Posts Section -->
+            <div class="col-md-6 outlineColumn" id="midCol">
+                <div class="container p-5">
+                    <h5 id="greetings">Hello,&nbsp;<div id="userHere"></div>!</h5>
+                    <h1 class="typewriter">Share your thoughts...</h1>
+                </div>
+
                 <div class="post-form">
                     
                     <form id="postForm" class="mb-3">
                         <div class="mb-3">
                             <textarea id="textInput" class="form-control textarea-style" placeholder="Enter your post..." rows="3" required></textarea>
                         </div>
+
                         <button type="submit" class="btn btn-primary">Post</button>
                         <div class="filter-container">
                             <label for="filter-select">Filter:</label>
@@ -143,12 +149,13 @@
                               <option value="timestamp">Most Recently Posted</option>
                             </select>
                           </div>
+
                     </form>
                 </div>
                 <div id="posts"></div>
             </div>
-            <div class="col-md-3">
-                <!-- Right Trending Section -->
+            <!-- Right Trending Section -->
+            <div class="col-md-3 outlineColumn p-5" id="rightCol">
                 <div id="trendingSection">
                     <h2>Top 50 Songs (USA)</h2>
                     <div id="tracks-container"></div>
@@ -156,7 +163,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script src="../scripts/trending.js"></script>
     <script src="../scripts/garden.js"></script>
