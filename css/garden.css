@@ -15,6 +15,18 @@ body {
   font-family: 'Chirp', 'sans-serif';
 }
 
+/*GARDEN COLUMN STYLING*/
+.row {
+  padding: 2%;
+}
+
+
+#midCol {
+  border-right: 1px solid #2f3336;
+  border-left: 1px solid #2f3336;
+}
+
+
 h1,
 h2,
 h3,
@@ -26,13 +38,13 @@ h6 {
 }
 
 .post {
-  border: 1px solid #2f3336;
-  padding: 10px;
-  margin-bottom: 10px;
+  border-top: 1px solid #2f3336;
+  border-bottom: 1px solid #2f3336;
+  padding: 20px;
 }
 
 .post .username {
-  font-weight: bold;
+  font-weight: bolder;
   color: #fff;
 }
 
@@ -40,6 +52,12 @@ h6 {
   color: #777;
   font-size: 12px;
   color: #fff;
+}
+
+.post .created-at {
+  color: #6e6e6e;
+  font-weight: lighter;
+  font-size: small;
 }
 
 .navbar-nav .nav-link {
@@ -120,4 +138,64 @@ h6 {
   background-color: #4B7C98;
   border-radius: 10px;
 }
-  
+#greetings {
+display: flex;
+justify-content: center;
+}
+
+/* POST INPUT FIELD */
+#textInput {
+  background-color: #000000;
+color: #ffffff;
+}
+
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  float: left;
+}
+
+.username,
+.post div {
+  margin-left: 40px;
+}
+
+/* TYPEWRITE FX */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(32, 11, 116); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #395E7A; }
+}
+
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  float: left;
+}
+
+.username,
+.post div {
+  margin-left: 40px;
+}
