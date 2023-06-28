@@ -83,3 +83,30 @@ h6 {
   margin-right: 5px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .column {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 80px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #6e6e6e;
+    color: #fff;
+    opacity: 70%;
+  }
+  
+  
