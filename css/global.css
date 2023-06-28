@@ -71,3 +71,33 @@
     background-color: #d9edf7;
     color: #31708f;
   }
+
+/* About Us Page Buttons */
+  .social-button {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    background-color: #005E91;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .social-button:hover {
+    background-color: lightskyblue;
+  }
+
+
+/* Custom ScrollBar */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1C2C45;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #395E7A;
+  border-radius: 10px;
+}
