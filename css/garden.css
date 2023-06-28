@@ -16,16 +16,25 @@ body {
 }
 
 /*GARDEN COLUMN STYLING*/
-.row {
-  padding: 2%;
-}
-
 
 #midCol {
-  border-right: 1px solid #2f3336;
+  overflow-y: auto;
+  height: calc(100vh);
   border-left: 1px solid #2f3336;
+  border-right: 1px solid #2f3336;
 }
 
+#midCol::-webkit-scrollbar {
+  width: 0;
+}
+
+#midCol::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#midCol::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
 
 h1,
 h2,
@@ -132,10 +141,11 @@ h6 {
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #1C2C45;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4B7C98;
+  background-color: #23374F;
   border-radius: 10px;
 }
 #greetings {
@@ -163,8 +173,8 @@ color: #ffffff;
 }
 
 /* TYPEWRITE FX */
-
 .typewriter {
+  font-size:1.25rem;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(32, 11, 116); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -181,21 +191,40 @@ color: #ffffff;
   to { width: 100% }
 }
 
+
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #395E7A; }
 }
 
+
+/* PROFILE PIC */
 .profile-picture {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
   float: left;
+
 }
 
 .username,
 .post div {
   margin-left: 40px;
+}
+
+/* FILTER CONTAINER */
+.filter-container {
+
+float: right;
+transform: translateX(-20px) translateY(-45px);
+}
+
+#filter-select {
+  background-color: #000000;
+  padding: 10px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
 }

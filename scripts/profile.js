@@ -35,7 +35,7 @@ function formatDate(dateString) {
 // >>>>>>>>>>>>>EDIT INFO SECTION FOR PROFILE PAGE<<<<<<<<<<<<<<<<
 
 // Add event listener to the Edit Profile button
-var editProfileButton = document.getElementById('edit-info');
+const editProfileButton = document.getElementById('edit-info');
 editProfileButton.addEventListener('click', updateProfile);
 
 // Function to handle profile update
@@ -43,12 +43,12 @@ function updateProfile(event) {
   event.preventDefault();
 
   // Get the updated profile information from the form fields
-  var updatedFullName = document.getElementById('Full Name').value;
-  var updatedUserName = document.getElementById('User Name').value;
-  var updatedBio = document.getElementById('Bio').value;
+  const updatedFullName = document.getElementById('Full Name').value;
+  const updatedUserName = document.getElementById('User Name').value;
+  const updatedBio = document.getElementById('Bio').value;
 
   // Prepare the data to be sent to the API
-  var data = {
+  const data = {
     fullName: updatedFullName,
     userName: updatedUserName,
     bio: updatedBio

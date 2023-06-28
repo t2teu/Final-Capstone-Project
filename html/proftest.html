@@ -9,18 +9,17 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/garden.css">
   <link rel="stylesheet" href="../css/profile.css">
-
   <link rel="stylesheet" href="../css/nav.css">
   
           <!-- Font Awesome Icons -->
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     
+
   <!--PREVENT ACCESS FEATURE-->
   <script src="/scripts/auth.js"></script>
   <script>
       if (isLoggedIn() === false) window.location.replace("login.html");
   </script>
-
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -118,11 +117,23 @@
                                         <img src="/images/luna.png" alt="Luna Ocean" class="luna-ocean-image">
                                         <span class="luna-ocean-text">&nbsp;Luna Ocean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •••</span>
                                       </a>
-                                      <div class="drop-up-content">
+                                      <div id="myDropUpContent" class="drop-up-content">
                                         <a href="#">Add Account</a>
                                         <a href="#">    <button id="logoutButton" onclick="logout()"  class="btn btn-outline-dark">Logout</button></a>
 
                                       </div>
+
+                                      <script>
+                                          let myContent = document.getElementById('myDropUpContent');
+                                          myContent.addEventListener('mouseover',funcion() {
+                                            myContent.classList.add('drop-up-content')
+                                          }
+
+                                       myContent.addEventListener('mouseout',funcion() {
+                                            myContent.classList.add('drop-up-content')
+                                          }
+                                          
+                                      </script>
                           </ul>
                       </div>
                   </div>

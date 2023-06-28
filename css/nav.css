@@ -82,7 +82,7 @@
     justify-content: center;
     align-items: center;
     width: 220px;
-    height: 60px;
+    height: 50px;
     border-radius: 30px;
     background-color: #4B7C98;
     color: #fff;
@@ -96,12 +96,34 @@
   }
 
 
+  /* Mini Post Button */
+
+.post-buttonn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #4B7C98;
+    border-color: #333;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .post-buttonn:hover {
+    background-color: #4d4d4d;
+    cursor: pointer;
+  }
+
+
   /* drop-up menu button */
 
   .luna-ocean-text {
     color: white;
   }
-  
+
   .drop-up-button {
     position: relative;
     cursor: pointer;
