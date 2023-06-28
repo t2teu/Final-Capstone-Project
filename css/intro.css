@@ -106,3 +106,8 @@ body {
 .navbar {
     margin-left: 100px;
 }
+
+h6 {
+    margin-top: 5350px;
+    opacity: 0%
+}

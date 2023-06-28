@@ -83,3 +83,21 @@ h6 {
   margin-right: 5px;
 }
 
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}

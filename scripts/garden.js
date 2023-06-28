@@ -1,4 +1,18 @@
-// get user token
+// Array of image URLs for profile pictures
+const profilePictures = [
+  'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+  'https://images.unsplash.com/photo-1534796636915-373b060bfa21',
+  'https://images.unsplash.com/photo-1508762883283-4c3272905071',
+  // Add more image URLs here
+];
+
+// Function to get a random profile picture URL
+function getRandomProfilePicture() {
+  const randomIndex = Math.floor(Math.random() * profilePictures.length);
+  return profilePictures[randomIndex];
+}
+
+// Function to get the user token from localStorage
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');
 
@@ -13,11 +27,11 @@ function getUserToken() {
   return 'DEFAULT_TOKEN';
 }
 
-// create a new post
+// Function to create a new post
 function createPost(text) {
   const token = getUserToken();
-  
-  // check if the text exceeds the character limit
+
+  // Check if the text exceeds the character limit
   const characterLimit = 500;
   if (text.length > characterLimit) {
     console.error('Post exceeds the character limit');
@@ -32,19 +46,19 @@ function createPost(text) {
     },
     body: JSON.stringify({ text })
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('New post created:', data);
-    const textInput = document.getElementById('textInput');
-    textInput.value = '';
-    fetchPosts();
-  })
-  .catch(error => {
-    console.error('Error creating post:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+      console.log('New post created:', data);
+      const textInput = document.getElementById('textInput');
+      textInput.value = '';
+      fetchPosts();
+    })
+    .catch(error => {
+      console.error('Error creating post:', error);
+    });
 }
 
-// function to delete a post
+// Function to delete a post
 function deletePost(postId) {
   const token = getUserToken();
 
@@ -55,17 +69,17 @@ function deletePost(postId) {
       'Authorization': `Bearer ${token}`
     }
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Post deleted:', data);
-    fetchPosts();
-  })
-  .catch(error => {
-    console.error('Error deleting post:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+      console.log('Post deleted:', data);
+      fetchPosts();
+    })
+    .catch(error => {
+      console.error('Error deleting post:', error);
+    });
 }
 
-// function to fetch posts from the API
+// Function to fetch posts from the API
 function fetchPosts() {
   const token = getUserToken();
 
@@ -76,56 +90,66 @@ function fetchPosts() {
       'Authorization': `Bearer ${token}`
     }
   })
-  .then(response => response.json())
-  .then(data => {
-    const postsContainer = document.getElementById('posts');
-    postsContainer.innerHTML = '';
+    .then(response => response.json())
+    .then(data => {
+      const postsContainer = document.getElementById('posts');
+      postsContainer.innerHTML = '';
 
-    // add post data to HTML
-    if (data && data.length > 0) {
-      data.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'post';
+      // Add post data to HTML
+      if (data && data.length > 0) {
+        data.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.className = 'post';
 
-        const usernameElement = document.createElement('div');
-        usernameElement.className = 'username';
-        usernameElement.innerHTML = post.username;
+          const profilePictureElement = document.createElement('img');
+          profilePictureElement.className = 'profile-picture';
+          profilePictureElement.src = getRandomProfilePicture();
 
-        const textElement = document.createElement('div');
-        textElement.innerHTML = post.text;
+          const contentElement = document.createElement('div');
+          contentElement.className = 'content';
 
-        const likesElement = document.createElement('div');
-        likesElement.className = 'likes';
-        likesElement.innerHTML = `Likes: ${post.likes.length}`;
+          const usernameElement = document.createElement('div');
+          usernameElement.className = 'username';
+          usernameElement.innerHTML = post.username;
 
-        // display delete button only for posts made from your token
-        if (post.userToken === token) {
-          const deleteButton = document.createElement('button');
-          deleteButton.textContent = 'Delete';
-          deleteButton.addEventListener('click', () => {
-            deletePost(post.id);
-          });
-          postElement.appendChild(deleteButton);
-        }
+          const textElement = document.createElement('div');
+          textElement.innerHTML = post.text;
 
-        postElement.appendChild(usernameElement);
-        postElement.appendChild(textElement);
-        postElement.appendChild(likesElement);
+          const likesElement = document.createElement('div');
+          likesElement.className = 'likes';
+          likesElement.innerHTML = `Likes: ${post.likes.length}`;
 
-        postsContainer.appendChild(postElement);
-      });
-    } else {
-      console.error('No posts found');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+          // Display delete button only for posts made from your token
+          if (post.userToken === token) {
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.addEventListener('click', () => {
+              deletePost(post.id);
+            });
+            contentElement.appendChild(deleteButton);
+          }
+
+          contentElement.appendChild(usernameElement);
+          contentElement.appendChild(textElement);
+          contentElement.appendChild(likesElement);
+
+          postElement.appendChild(profilePictureElement);
+          postElement.appendChild(contentElement);
+
+          postsContainer.appendChild(postElement);
+        });
+      } else {
+        console.error('No posts found');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 }
 
 fetchPosts();
 
-// the post button
+// Event listener for the post form submission
 const form = document.getElementById('postForm');
 
 form.addEventListener('submit', event => {
