@@ -98,6 +98,33 @@ function fetchPosts() {
         likesElement.className = 'likes';
         likesElement.innerHTML = `Likes: ${post.likes.length}`;
 
+        // Calculate time elapsed since the post was created
+        const createdAtElement = document.createElement('div');
+        createdAtElement.className = 'created-at';
+        const createdAt = new Date(post.createdAt);
+        const now = new Date();
+        const timeDiff = now - createdAt;
+
+        if (timeDiff < 60000) {
+          // Less than 1 minute ago
+          createdAtElement.textContent = 'Just now';
+        } else if (timeDiff < 3600000) {
+          // Less than 1 hour ago
+          const minutes = Math.floor(timeDiff / 60000);
+          createdAtElement.textContent = `${minutes} minutes ago`;
+        } else if (timeDiff < 86400000) {
+          // Less than 1 day ago
+          const hours = Math.floor(timeDiff / 3600000);
+          createdAtElement.textContent = `${hours} hours ago`;
+        } else if (timeDiff < 172800000) {
+          // Less than 2 days ago
+          createdAtElement.textContent = 'Yesterday';
+        } else {
+          // More than 2 days ago
+          const options = { year: 'numeric', month: 'long', day: 'numeric' };
+          createdAtElement.textContent = createdAt.toLocaleDateString(undefined, options);
+        }
+
         // display delete button only for posts made from your token
         if (post.userToken === token) {
           const deleteButton = document.createElement('button');
@@ -107,10 +134,10 @@ function fetchPosts() {
           });
           postElement.appendChild(deleteButton);
         }
-
         postElement.appendChild(usernameElement);
         postElement.appendChild(textElement);
         postElement.appendChild(likesElement);
+        postElement.appendChild(createdAtElement);
 
         postsContainer.appendChild(postElement);
       });
@@ -122,6 +149,7 @@ function fetchPosts() {
     console.error('Error:', error);
   });
 }
+
 
 fetchPosts();
 
