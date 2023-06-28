@@ -44,7 +44,7 @@ h6 {
 }
 
 .post .username {
-  font-weight: bold;
+  font-weight: bolder;
   color: #fff;
 }
 
@@ -52,6 +52,12 @@ h6 {
   color: #777;
   font-size: 12px;
   color: #fff;
+}
+
+.post .created-at {
+  color: #6e6e6e;
+  font-weight: lighter;
+  font-size: small;
 }
 
 .navbar-nav .nav-link {
@@ -132,6 +138,11 @@ h6 {
   background-color: #395E7A;
   border-radius: 10px;
 }
+#greetings {
+display: flex;
+justify-content: center;
+}
+
 /* POST INPUT FIELD */
 #textInput {
   background-color: #000000;
