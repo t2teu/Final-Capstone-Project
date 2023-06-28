@@ -19,13 +19,13 @@ body {
 .row {
   padding: 2%;
 }
-#leftCol {
-  border-right: 1px solid #2f3336;;
+
+
+#midCol {
+  border-right: 1px solid #2f3336;
+  border-left: 1px solid #2f3336;
 }
 
-#rightCol {
-  border-left: 1px solid #2f3336;;
-}
 
 h1,
 h2,
@@ -132,7 +132,33 @@ h6 {
   background-color: #395E7A;
   border-radius: 10px;
 }
-  
+/* POST INPUT FIELD */
 #textInput {
-  background-color: #141414;
+  background-color: #000000;
+color: #ffffff;
+}
+
+/* TYPEWRITE FX */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(32, 11, 116); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #395E7A; }
 }
