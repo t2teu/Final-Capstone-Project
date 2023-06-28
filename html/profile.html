@@ -135,68 +135,76 @@
                 
                 <!-- Middle Posts Section -->
                         <!-- Profile Section -->
-          <section class="h-100 gradient-custom-2" style="margin-left: -185px;">
-            <div class="container">
-              <div class="row d-flex justify-content-center h-100">
-                <div class="card">
-                    <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
-                      <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                        <img src="/images/luna.png" alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2 rounded-circle" style="width: 150px; z-index: 1">
-
-                        <button id="edit-profile-form" type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark" style="z-index: 1;">
-                          Edit Profile
-                        </button>                       
-                      </div>
-                      <div class="ms-3" style="margin-top: 130px;">
-                        <h5>Luna Ocean</h5>
-                        <p>Bay Area, CA</p>
-                      </div>
-                    </div>
-                    <div class="p-4 text-black" style="background-color: #f8f9fa;">
-                      <div class="d-flex justify-content-end text-center py-1">
-                        <div>
-                          <p class="mb-1 h5">253</p>
-                          <p class="small text-muted mb-0">Photos</p>
-                        </div>
-                        <div class="px-3">
-                          <p class="mb-1 h5">32.6k</p>
-                          <p class="small text-muted mb-0">Followers</p>
-                        </div>
-                        <div>
-                          <p class="mb-1 h5">478</p>
-                          <p class="small text-muted mb-0">Following</p>
-                        </div>
-                      </div>
-                    </div><br><br>
-                    <div class="card-body p-4 text-black">
-                      <div class="mb-5">
-                        <p class="lead fw-normal mb-1">About</p>
-                        <div class="p-4" style="background-color: #f8f9fa;">
-                          <p class="font-italic mb-1">Music Therapist</p>
-                          <p class="font-italic mb-1">Fav Genres: Ethereal/Mystical/Tribal </p>
-                          <p class="font-italic mb-0">Loves: Forests, Mountains, and the Ocean</p>
-                        </div>
-                      </div>
-                      <div class="mb-5">
-                        <p class="lead fw-normal mb-1">Edit Info</p>
-                        <div class="p-4" style="background-color: #f8f9fa;">
-                          <form id="editProfileForm">
-                            <div class="form-group">
-                              <label for="trainer"></label>
-                              <input type="text" class="form-control" id="trainer" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                              <label for="location"></label>
-                              <input type="text" class="form-control" id="location" placeholder="Bio">
-                            </div>
-                            <div class="form-group">
-                              <label for="badges"></label>
-                              <input type="text" class="form-control" id="badges" placeholder="Location">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Save</button>
-                          </form>
-                        </div>
-                      </div>
+                        <section class="h-100 gradient-custom-2" style="margin-left: -185px;">
+                          <div class="container">
+                            <div class="row d-flex justify-content-center h-100">
+                              <div class="card">
+                                <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
+                                  <div class="col-3 d-flex flex-column align-items-center">
+                                    <img src="/images/luna.png" alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2 rounded-circle" style="width: 150px; z-index: 1">
+                        
+                                    <div class="dropdown">
+                                      <button id="edit-profile-dropdown" class="btn btn-outline-dark dropdown-toggle" type="button" data-mdb-toggle="dropdown" aria-expanded="false" style="z-index: 1;">
+                                        Edit Profile
+                                      </button>
+                                      <div class="dropdown-menu" aria-labelledby="edit-profile-dropdown">
+                                        <a class="dropdown-item" href="#">Edit Info</a>
+                                        <a class="dropdown-item" href="#">Another Action</a>
+                                        <a class="dropdown-item" href="#">Something Else</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-9 d-flex flex-column align-items-start justify-content-center">
+                                    <h5 class="mb-0">Luna Ocean</h5>
+                                    <p class="mb-0">Bay Area, CA</p>
+                                  </div>
+                                </div>
+                                <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                                  <div class="row justify-content-end text-center py-1">
+                                    <div class="col">
+                                      <p class="mb-1 h5">253</p>
+                                      <p class="small text-muted mb-0">Photos</p>
+                                    </div>
+                                    <div class="col">
+                                      <p class="mb-1 h5">32.6k</p>
+                                      <p class="small text-muted mb-0">Followers</p>
+                                    </div>
+                                    <div class="col">
+                                      <p class="mb-1 h5">478</p>
+                                      <p class="small text-muted mb-0">Following</p>
+                                    </div>
+                                  </div>
+                                </div><br><br>
+                                <div class="card-body p-4 text-black">
+                                  <div class="row mb-5">
+                                    <div class="col">
+                                      <p class="lead fw-normal mb-1">About</p>
+                                      <div class="p-4" style="background-color: #f8f9fa;">
+                                        <p class="font-italic mb-1">Music Therapist</p>
+                                        <p class="font-italic mb-1">Fav Genres: Ethereal/Mystical/Tribal</p>
+                                        <p class="font-italic mb-0">Loves: Forests, Mountains, and the Ocean</p>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <p class="lead fw-normal mb-1">Edit Info</p>
+                                      <div class="p-4" style="background-color: #f8f9fa;">
+                                        <form id="editProfileForm">
+                                          <div class="form-group">
+                                            <label for="trainer"></label>
+                                            <input type="text" class="form-control" id="Full Name" placeholder="Full Name">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="location"></label>
+                                            <input type="text" class="form-control" id="User Name" placeholder="User Name">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="badges"></label>
+                                            <input type="text" class="form-control" id="Bio" placeholder="Bio">
+                                          </div>
+                                          <button id="edit-info" type="submit" class="btn btn-primary">Save</button>
+                                        </form>
+                                      </div>
+                                    </div>
                       
                       <div class="d-flex justify-content-between align-items-center mb-4">
                         <p class="lead fw-normal mb-0">Recent photos</p>
