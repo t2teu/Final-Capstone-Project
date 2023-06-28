@@ -85,7 +85,13 @@ function fetchPosts() {
 
 
         // Sorts all the posts on the garden by number of likes in descending order
-        data.sort((a, b) => b.likes.length - a.likes.length);
+        data.sort((a, b) => {
+          if (a.likes.length !== b.likes.length) {
+            return b.likes.length - a.likes.length; // Sort by most likes
+          } else {
+            return new Date(b.timestamp) - new Date(a.timestamp); // Sort by most recently posted
+          }
+        });
 
 
     // add post data to HTML

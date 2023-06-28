@@ -134,11 +134,19 @@
                 <!-- Middle Posts Section -->
                 <h1>Home</h1>
                 <div class="post-form">
+                    
                     <form id="postForm" class="mb-3">
                         <div class="mb-3">
                             <textarea id="textInput" class="form-control textarea-style" placeholder="Enter your post..." rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Post</button>
+                        <div class="filter-container">
+                            <label for="filter-select">Filter:</label>
+                            <select id="filter-select">
+                              <option value="likes">Most Likes</option>
+                              <option value="timestamp">Most Recently Posted</option>
+                            </select>
+                          </div>
                     </form>
                 </div>
                 <div id="posts"></div>
