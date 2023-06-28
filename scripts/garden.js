@@ -91,6 +91,12 @@ function fetchPosts() {
         usernameElement.className = 'username';
         usernameElement.innerHTML = post.username;
 
+        // Create and append profile picture element
+        const profilePictureElement = document.createElement('img');
+        profilePictureElement.className = 'profile-picture';
+        profilePictureElement.src = `https://www.gravatar.com/avatar/${post.emailHash}`;
+        postElement.appendChild(profilePictureElement);
+
         const textElement = document.createElement('div');
         textElement.innerHTML = post.text;
 
@@ -134,6 +140,7 @@ function fetchPosts() {
           });
           postElement.appendChild(deleteButton);
         }
+        
         postElement.appendChild(usernameElement);
         postElement.appendChild(textElement);
         postElement.appendChild(likesElement);
