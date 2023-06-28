@@ -100,6 +100,7 @@ function fetchPosts() {
           const usernameElement = document.createElement('div');
           usernameElement.className = 'username';
           usernameElement.innerHTML = post.username;
+
         // Create and append profile picture element
         const profilePictureElement = document.createElement('img');
         profilePictureElement.className = 'profile-picture';
@@ -162,11 +163,12 @@ function fetchPosts() {
         postElement.appendChild(usernameElement);
         postElement.appendChild(textElement);
         postElement.appendChild(likesElement);
-        postElement.appendChild(createdAtElement);
+
 
           postElement.appendChild(usernameElement);
           postElement.appendChild(textElement);
           postElement.appendChild(likesElement);
+          postElement.appendChild(createdAtElement);
 
           postsContainer.appendChild(postElement);
         });
