@@ -24,6 +24,8 @@ body {
 #midCol {
   border-right: 1px solid #2f3336;
   border-left: 1px solid #2f3336;
+  overflow-y:scroll;
+  height: 100vh;
 }
 
 
@@ -132,10 +134,11 @@ h6 {
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #1C2C45;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4B7C98;
+  background-color: #23374F;
   border-radius: 10px;
 }
 #greetings {
