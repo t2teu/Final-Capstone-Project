@@ -145,7 +145,7 @@ justify-content: center;
 
 /* POST INPUT FIELD */
 #textInput {
-  background-color: #000000;
+  background-color: #141414;
 color: #ffffff;
 }
 
@@ -198,4 +198,39 @@ color: #ffffff;
 .username,
 .post div {
   margin-left: 40px;
+}
+
+.textarea-style:focus {
+  outline: white;
+}
+
+#midCol {
+  overflow-y: auto;
+  height: calc(100vh);
+}
+
+#midCol::-webkit-scrollbar {
+  width: 0;
+}
+
+#midCol::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#midCol::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  margin-right: 10px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #6e6e6e;
 }

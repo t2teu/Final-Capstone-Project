@@ -1,5 +1,3 @@
-"use strict";
-
 // Get user token
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');
@@ -116,7 +114,7 @@ function fetchPosts() {
           // Display delete button only for posts made from your token
           if (post.userToken === token) {
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
+            deleteButton.innerHTML = 'Delete';
             deleteButton.addEventListener('click', () => {
               deletePost(post.id);
             });
@@ -131,28 +129,28 @@ function fetchPosts() {
 
         if (timeDiff < 60000) {
           // Less than 1 minute ago
-          createdAtElement.textContent = 'Just now';
+          createdAtElement.innerHTML = 'Just now';
         } else if (timeDiff < 3600000) {
           // Less than 1 hour ago
           const minutes = Math.floor(timeDiff / 60000);
-          createdAtElement.textContent = `${minutes} minutes ago`;
+          createdAtElement.innerHTML = `${minutes} minutes ago`;
         } else if (timeDiff < 86400000) {
           // Less than 1 day ago
           const hours = Math.floor(timeDiff / 3600000);
-          createdAtElement.textContent = `${hours} hours ago`;
+          createdAtElement.innerHTML = `${hours} hours ago`;
         } else if (timeDiff < 172800000) {
           // Less than 2 days ago
-          createdAtElement.textContent = 'Yesterday';
+          createdAtElement.innerHTML = 'Yesterday';
         } else {
           // More than 2 days ago
           const options = { year: 'numeric', month: 'long', day: 'numeric' };
-          createdAtElement.textContent = createdAt.toLocaleDateString(undefined, options);
+          createdAtElement.innerHTML = createdAt.toLocaleDateString(undefined, options);
         }
 
         // display delete button only for posts made from your token
         if (post.userToken === token) {
           const deleteButton = document.createElement('button');
-          deleteButton.textContent = 'Delete';
+          deleteButton.innerHTML = 'Delete';
           deleteButton.addEventListener('click', () => {
             deletePost(post.id);
           });
@@ -206,6 +204,7 @@ form.addEventListener('submit', event => {
     createPost(text);
   }
 });
+
 
 // Initial fetch and display of posts
 fetchPosts();
