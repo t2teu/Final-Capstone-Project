@@ -1,3 +1,5 @@
+"use strict";
+
 // get user token
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');

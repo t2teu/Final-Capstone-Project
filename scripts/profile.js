@@ -1,3 +1,5 @@
+"use strict";
+
 fetch('https://microbloglite.herokuapp.com/api/users/{username}')
       .then(response => response.json())
       .then(data => {
