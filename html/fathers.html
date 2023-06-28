@@ -23,6 +23,13 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -32,7 +39,6 @@
     <link rel="stylesheet" href="/css/global.css" />
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="/css/landing.css" />
-    <link rel="stylesheet" href="/css/card_father.css">
 
     <!--Animate.CSS CDN-->
     <link
@@ -50,120 +56,186 @@
     <!--Prevent Access Feature -->
   </head>
   <body>
+
     <header>
  		 <!-- Navbar -->
       <nav class="navbar navbar-expand-md animate__animated animate__fadeIn">
         <div class="container-fluid">
-          <a class="navbar-brand animate__animated animate__bounce" href="/html/login.html"><img src="/images/AmphyLogo.png" alt="Logo" width="160" height="140"></a>
+          <a class="navbar-brand animate__animated animate__bounce" href="/html/intro.html">
+            <img src="/images/white_logo.png" alt="Logo" width="160" height="140">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/html/intro.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/fathers.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Contact</a>
+              </li>
+            </ul>
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/html/login.html">Login</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="portalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">
+                  Enter Portal
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="portalDropdown">
+                  <li><a class="dropdown-item" href="/html/garden.html" style="color: black;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='black'">Newsfeed</a></li>
+                  <li><a class="dropdown-item" href="/html/profile.html"  style="color: black;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='black'">My Profile</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/signup.html"> Sign Up</a>
+                <a class="nav-link" href="/html/login.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/garden.html"> Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/html/fathers.html">Founding Fathers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Contact</a>
+                <a class="nav-link" href="/html/signup.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Sign Up</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </nav>   
+      
     </header>
+    <center>
 
-    <main class="container">
-        <div class="container">
-            <div class="cardContainer">
-                <div class="cover atvImg">
-                    <div class="atvImg-layer">
-                        This is the BG
-                    </div>
-                    <div class="atvImg-layer"></div>
-                </div>
+      <h1 style="margin-bottom: 155px;"> Meet The Founders:</h1>
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+      <main class="container">
+        <div class="row">
+
+          <div class="col-md-6 mb-4">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="/images/matheus.png" width="320" height="320">
+                <br><br><h1>Matheus Souza</h1>
+                <h4>Frontend Engineer</h4>
+                <a class="social-button" href="https://www.linkedin.com/in/matheus-souza-688a07253/">LinkedIn</a>
+                <a class="social-button" href="https://github.com/teteusouza">GitHub</a>
+              </div>
             </div>
-        </div>
-    </main>
-    <br>    <br>    <br>    <br>
+          </div>
 
+
+          <div class="col-md-6 mb-4">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="/images/leanna.png" width="320" height="320">
+                <br><br><h1>Leanna Bonalba</h1>
+                <h4>Frontend Dev | Multimedia Artist</h4>
+                <a class="social-button" href="https://www.linkedin.com/in/leanna-bonalba-326b7a160/">LinkedIn</a>
+                <a class="social-button" href="https://github.com/leannabonalba">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 mb-4">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="/images/jenny.png" width="320" height="320">
+                <br><br><h1>Jennifer Jennings</h1>
+                <h4>Frontend Dev | UI/UX | DevOps</h4>
+                <a class="social-button" href="https://www.linkedin.com/in/jennifermariejennings/">LinkedIn</a>
+                <a class="social-button" href="https://github.com/jenaecodes">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 mb-4">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="/images/regin.png" width="320" height="320">
+                <br><br><h1>Regin Guevarra</h1>
+                <h4>Frontend Engineer</h4>
+                <a class="social-button" href="https://www.linkedin.com/in/regin-guevarra-363676206/">LinkedIn</a>
+                <a class="social-button" href="https://github.com/ReginGuevarra">GitHub</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </center>
+    <br><br>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+      <div class="container py-5">
+        <div class="row py-4">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="" alt="" width="180" class="mb-3">
+            <p class="font-italic text-muted">We simplify your life when<br>it comes to organizing<br>your favorite music.</p>
+            <ul class="list-inline mt-4">
+              <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fab fa-twitter" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fab fa-facebook" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fab fa-instagram" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fab fa-pinterest" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fab fa-vimeo" style="color: lightseagreen;"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Music</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="text-muted">By Artist</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">By Genre</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">By Tempo</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">By Era</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="login.html" class="text-muted">Login</a></li>
+              <li class="mb-2"><a href="signup.html" class="text-muted">Register</a></li>
+              <li class="mb-2"><a href="garden.html" class="text-muted">Blog</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Music Playlist</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+            <p class="text-muted mb-4">Become informed monthly of<br>the latest top hits based<br>on the music you prefer!</p>
+            <div class="p-1 rounded border">
+              <div class="input-group">
+                <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+                <div class="input-group-append">
+                  <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane" style="color: lightseagreen;"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Copyrights -->
+      <div class="bg-light py-4">
+        <div class="container text-center">
+          <p class="text-muted mb-0 py-2">© 2023 Amphy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End -->
 
     <!--Sign Up New User-->
     <script src="/scripts/registration.js"></script>
 
     <!-- Page-specific code -->
     <script src="/scripts/landing.js"></script>
-    <script src="/scripts/card_father.js"></script>
 
     <!--Bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <!-- Jquery and JS for Navbar Dropdown to Function -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
   </body>
-<!-- Footer -->
-<footer class="bg-white">
-  <div class="container py-5">
-    <div class="row py-4">
-      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="" alt="" width="180" class="mb-3">
-        <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-        <ul class="list-inline mt-4">
-          <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
-          <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
-          <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
-          <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-        <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="#" class="text-muted">For Women</a></li>
-          <li class="mb-2"><a href="#" class="text-muted">For Men</a></li>
-          <li class="mb-2"><a href="#" class="text-muted">Stores</a></li>
-          <li class="mb-2"><a href="#" class="text-muted">Our Blog</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-        <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
-          <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
-          <li class="mb-2"><a href="#" class="text-muted">Wishlist</a></li>
-          <li class="mb-2"><a href="#" class="text-muted">Our Products</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-lg-0">
-        <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
-        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
-        <div class="p-1 rounded border">
-          <div class="input-group">
-            <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
-            <div class="input-group-append">
-              <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Copyrights -->
-  <div class="bg-light py-4">
-    <div class="container text-center">
-      <p class="text-muted mb-0 py-2">© 2019 Bootstrapious All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-<!-- End -->
-
 </html>
