@@ -1,0 +1,158 @@
+/* Reset default styles */
+.vertical-nav,
+.vertical-nav ul,
+.vertical-nav li {
+    font-size: 23px;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
+
+/* Navbar styles */
+.vertical-nav {
+  color: #f1f1f1;
+  padding: 10px;
+}
+
+.vertical-nav ul li {
+  margin-bottom: 5px;
+}
+
+.vertical-nav a {
+  display: inline-flex; /* Use flexbox to align icon and text */
+  align-items: center; /* Center align icon and text vertically */
+  padding: 5px;
+  color: #fefefe;
+  text-decoration: none;
+  position: relative;
+}
+
+.vertical-nav a:hover {
+  color: #fff;
+}
+
+.vertical-nav a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 60%;
+  background-color: #eeecec28;
+  opacity: 0;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.vertical-nav a:hover:before {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  opacity: 1;
+}
+
+.vertical-nav i {
+  margin-right: 5px;
+}
+
+.vertical-nav span {
+  vertical-align: middle;
+}
+
+/* Remove inner circle */
+.vertical-nav a:before {
+  content: none;
+}
+
+/* Display "Notifications", "Messages", "Bookmarks", and "Communities" on a single line */
+.vertical-nav ul li:nth-child(4),
+.vertical-nav ul li:nth-child(5),
+.vertical-nav ul li:nth-child(6),
+.vertical-nav ul li:nth-child(7),
+.vertical-nav ul li:nth-child(8) {
+  display: inline-flex;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+/* Post Button */
+
+.post-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #4B7C98;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .post-button:hover {
+    background-color: #90c6f2;
+    cursor: pointer;
+  }
+
+
+  /* drop-up menu button */
+
+  .luna-ocean-text {
+    color: white;
+  }
+  
+  .drop-up-button {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .drop-up-button:hover .drop-up-content {
+    display: block;
+  }
+  
+  .drop-up-menu {
+    margin-top: 105px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .luna-ocean-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .drop-up-content {
+    display: none;
+    position: absolute;
+    margin-bottom: 60px;
+    bottom: 40px;
+    left: 0;
+    z-index: 1;
+    min-width: 160px;
+    padding: 8px 0;
+    background-color: #f9f9f9;
+    border-radius: 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .drop-up-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+
+  }
+  
+  .drop-up-content a:hover {
+    background-color: #ddd;
+
+  }
+  
+  .drop-up-menu:hover .drop-up-content {
+    display: block;
+  }
+  
+  
+  

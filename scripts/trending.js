@@ -1,3 +1,5 @@
+"use strict";
+
 async function fetchWebApi(endpoint, method, body) {
     const token = 'BQCWvE-nr0mO-N-J7dHTZIH_xfPZKeywEuER5gbUgrIft-um7UrzVNO8-qjo0IXGtNx40fcyjSIp8EB7ykNiK1CAsDLoXUqWbkND_m7xvNXo6wMudhHwbfzDjdZOjKXrJzv64O9eM3YbBFJXA7wLU8EJwmTNe7_KOwMM6b8IjoB7bFGhPCbbeMfI7VO1BLdyCSfD9CBobMngBAFWhZJgt7WDn4NO5_ruTOEti6XENqtap1dmJ95RUarHb81B_VmTvFkw6m1u3PQnkd5W229kSXOe';
 

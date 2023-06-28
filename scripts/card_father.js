@@ -1,3 +1,5 @@
+"use strict";
+
 function atvImg(){
 	var d = document,
 		de = d.documentElement,
