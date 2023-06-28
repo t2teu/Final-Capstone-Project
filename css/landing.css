@@ -18,7 +18,7 @@ body {
 #introDisplay {
     border-radius: 20px 0 0 20px;
     background-image: url("https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    height: auto; /* You must set a specified height */
+    height: auto; 
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
 }
@@ -37,7 +37,7 @@ p {
 
   .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid rgb(32, 11, 116); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
@@ -55,5 +55,5 @@ p {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: #395E7A; }
   }

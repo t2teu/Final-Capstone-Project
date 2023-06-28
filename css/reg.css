@@ -1,9 +1,9 @@
-/* Landing Page CSS */
+/* User Registration Page CSS */
 
 .loginContainer {
-    border-radius: 20px;
-    background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
-    filter:drop-shadow(.5rem .5rem 1rem black);
+  border-radius: 20px;
+  background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
+  filter: drop-shadow(.5rem .5rem 1rem black);
 }
 
 .loginColumn {
@@ -12,10 +12,10 @@
 
 #introDisplay {
     border-radius: 20px 0 0 20px;
-    background-image: url("/images/amphy_phone.png");
-    height: auto; /* You must set a specified height */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    background-position: center; /* Center the image */
+    background-image: url("/images/anem_phone.png");
+    height: auto;
+    background-size: cover; 
+    background-position: center;
 }
 
 p {
@@ -32,10 +32,10 @@ p {
 
   .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid rgb(32, 11, 116); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    letter-spacing: .15em;
     animation: 
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
@@ -50,14 +50,14 @@ p {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: #395E7A; }
   }
 
-  
-
+  /* Counter */
 
   .counter-wrapper {
     text-align: center;
+    overflow: hidden;
   }
 
   .counter {

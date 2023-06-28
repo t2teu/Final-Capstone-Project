@@ -16,6 +16,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -61,31 +62,45 @@
  		 <!-- Navbar -->
       <nav class="navbar navbar-expand-md animate__animated animate__fadeIn">
         <div class="container-fluid">
-          <a class="navbar-brand animate__animated animate__bounce" href="/html/login.html"><img src="/images/AmphyLogo.png" alt="Logo" width="160" height="140"></a>
+          <a class="navbar-brand animate__animated animate__bounce" href="/html/intro.html">
+            <img src="/images/white_logo.png" alt="Logo" width="160" height="140">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/html/intro.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/fathers.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Contact</a>
+              </li>
+            </ul>
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/html/login.html">Login</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="portalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">
+                  Enter Portal
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="portalDropdown">
+                  <li><a class="dropdown-item" href="/html/garden.html" style="color: black;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='black'">Newsfeed</a></li>
+                  <li><a class="dropdown-item" href="/html/profile.html"  style="color: black;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='black'">My Profile</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/signup.html"> Sign Up</a>
+                <a class="nav-link" href="/html/login.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/garden.html"> Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/html/fathers.html">Founding Fathers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Contact</a>
+                <a class="nav-link" href="/html/signup.html" style="color: white;" onmouseover="this.style.color='lightseagreen'" onmouseout="this.style.color='white'">Sign Up</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </nav>   
+      
     </header>
 
     <div class="counter-wrapper">
@@ -127,15 +142,17 @@
                         <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required/>
                         <label for="agree-term" class="label-agree-term">
                           <span><span></span></span>
-                          <span style="font-size: 12px;">I agree to all statements in <a href="#" class="text-white fw-bold">Terms of Service</a></span>
+                          <span style="font-size: 12px;">I agree to all statements in <a href="#" style="color: white;" onmouseover="this.style.color='lightseagreen';" onmouseout="this.style.color='white';">Terms of Service</a></span>
                         </label>
                       </div><br>
                       
-                      <button class="btn btn-outline-warning btn-lg px-5" id="loginButton" href="login.html" type="submit"> JOIN</button>
+                      <button class="btn btn-lg px-5" id="loginButton" href="login.html" type="submit" style="color: lightseagreen; border-color: lightseagreen;" onmouseover="this.style.backgroundColor='lightseagreen'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='lightseagreen';"> JOIN</button>
                     </form><br><br>
                     
                     <div>
-                      <p class="mb-0" style="text-align: center;">Already have an account? <br><a href="login.html" class="text-white fw-bold">Sign In</a></p>
+                      <p class="mb-0" style="text-align: center;">Already have an account? <br><a href="login.html" style="color: white;" onmouseover="this.style.color='lightseagreen';" onmouseout="this.style.color='white';">Sign In</a>
+
+                      </p>
                     </div><br><br>
     
                   <div class="typewriter" id="displayNotif">Ready to Dance?</div>
@@ -147,11 +164,11 @@
           <section class="container">
             <div class="row justify-content-center align-items-center g-6 p-5 text-justify">
               <div class="col-4">
-                <h2>What is Amphy About?</h2>
+                <h2>About Anemone:</h2>
               </div>
               <div class="col-8">
                 <p>
-                  Amphy is the NUMBER ONE place for music discussion online.<br>We use data from industry-leading music applications to<br>facilitate the discussion of your favorite songs.<br><br>Join us to participate in live album-listening parties<br>and conversations about the most recent hits!
+                  Anemone is the NUMBER ONE place for music discussion online.<br>We use data from industry-leading music applications to<br>facilitate the discussion of your favorite songs.<br><br>Join us to participate in live album-listening parties<br>and conversations about the most recent hits!
                 </p>
               </div>
             </div>
@@ -165,11 +182,11 @@
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="" alt="" width="180" class="mb-3">
             <p class="font-italic text-muted">We simplify your life when<br>it comes to organizing<br>your favorite music.</p>
             <ul class="list-inline mt-4">
-              <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fab fa-twitter" style="color: orange;"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fab fa-facebook" style="color: orange;"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fab fa-instagram" style="color: orange;"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fab fa-pinterest" style="color: orange;"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fab fa-vimeo" style="color: orange;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fab fa-twitter" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fab fa-facebook" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fab fa-instagram" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fab fa-pinterest" style="color: lightseagreen;"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fab fa-vimeo" style="color: lightseagreen;"></i></a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
@@ -197,20 +214,24 @@
               <div class="input-group">
                 <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
                 <div class="input-group-append">
-                  <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane" style="color: orange;"></i></button>
+                  <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane" style="color: lightseagreen;"></i></button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div><center><h4 class="text-muted justify-content-center" style="margin-top: -50px;">
+        <span style="color: lightseagreen;">Contact:</span> info@anemone.com
+      </h4>
+      ></center>
     
       <!-- Copyrights -->
       <div class="bg-light py-4">
-        <div class="container text-center">
-          <p class="text-muted mb-0 py-2">© 2023 Amphy. All rights reserved.</p>
+        <div class="container d-flex justify-content-center">
+          <p class="text-muted mb-0 py-2">© 2023 Anemone. All rights reserved.</p>
         </div>
       </div>
+      
     </footer>
     <!-- End -->
 
@@ -248,11 +269,14 @@ animateCounter();
     <script src="/scripts/landing.js"></script>
 
     <!--Bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     
-  </body>
+<!-- Jquery and JS for Navbar Dropdown to Function -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
 </html>
