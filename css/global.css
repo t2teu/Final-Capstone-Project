@@ -88,3 +88,16 @@
   .social-button:hover {
     background-color: lightskyblue;
   }
+
+
+/* Custom ScrollBar */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1C2C45;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #395E7A;
+  border-radius: 10px;
+}
