@@ -22,12 +22,21 @@ body {
 
 
 #midCol {
-  border-right: 1px solid #2f3336;
-  border-left: 1px solid #2f3336;
-  overflow-y:scroll;
-  height: 100vh;
+  overflow-y: auto;
+  height: calc(100vh);
 }
 
+#midCol::-webkit-scrollbar {
+  width: 0;
+}
+
+#midCol::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#midCol::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
 
 h1,
 h2,
