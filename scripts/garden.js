@@ -1,3 +1,5 @@
+"use strict";
+
 // Get user token
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');
@@ -65,6 +67,27 @@ function deletePost(postId) {
     });
 }
 
+// Function to like a post
+function likePost(postId) {
+  const token = getUserToken();
+
+  fetch(`https://microbloglite.herokuapp.com/api/posts/${postId}/like`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Post liked:', data);
+      fetchPosts(); // Refresh the posts after liking
+    })
+    .catch(error => {
+      console.error('Error liking post:', error);
+    });
+}
+
 // Function to fetch posts from the API based on the selected filter
 function fetchPosts() {
   const token = getUserToken();
@@ -95,21 +118,34 @@ function fetchPosts() {
           const postElement = document.createElement('div');
           postElement.className = 'post';
 
+          // Create and append profile picture element
+          const profilePictureElement = document.createElement('img');
+          profilePictureElement.className = 'profile-picture';
+          profilePictureElement.src = `https://www.gravatar.com/avatar/${post.emailHash}`;
+          postElement.appendChild(profilePictureElement);
+
           const usernameElement = document.createElement('div');
           usernameElement.className = 'username';
           usernameElement.innerHTML = post.username;
-        // Create and append profile picture element
-        const profilePictureElement = document.createElement('img');
-        profilePictureElement.className = 'profile-picture';
-        profilePictureElement.src = `https://www.gravatar.com/avatar/${post.emailHash}`;
-        postElement.appendChild(profilePictureElement);
+          postElement.appendChild(usernameElement);
 
-        const textElement = document.createElement('div');
-        textElement.innerHTML = post.text;
+          const textElement = document.createElement('div');
+          textElement.innerHTML = post.text;
+          postElement.appendChild(textElement);
 
           const likesElement = document.createElement('div');
           likesElement.className = 'likes';
           likesElement.innerHTML = `Likes: ${post.likes.length}`;
+          postElement.appendChild(likesElement);
+
+          // Create like button
+          const likeButton = document.createElement('button');
+            likeButton.innerHTML = 'Like';
+            likeButton.className = 'likes-button';
+            likeButton.addEventListener('click', () => {
+              likePost(post.id);
+            });
+            postElement.appendChild(likeButton);
 
           // Display delete button only for posts made from your token
           if (post.userToken === token) {
@@ -120,51 +156,29 @@ function fetchPosts() {
             });
             postElement.appendChild(deleteButton);
           }
-        // Calculate time elapsed since the post was created
-        const createdAtElement = document.createElement('div');
-        createdAtElement.className = 'created-at';
-        const createdAt = new Date(post.createdAt);
-        const now = new Date();
-        const timeDiff = now - createdAt;
 
-        if (timeDiff < 60000) {
-          // Less than 1 minute ago
-          createdAtElement.innerHTML = 'Just now';
-        } else if (timeDiff < 3600000) {
-          // Less than 1 hour ago
-          const minutes = Math.floor(timeDiff / 60000);
-          createdAtElement.innerHTML = `${minutes} minutes ago`;
-        } else if (timeDiff < 86400000) {
-          // Less than 1 day ago
-          const hours = Math.floor(timeDiff / 3600000);
-          createdAtElement.innerHTML = `${hours} hours ago`;
-        } else if (timeDiff < 172800000) {
-          // Less than 2 days ago
-          createdAtElement.innerHTML = 'Yesterday';
-        } else {
-          // More than 2 days ago
-          const options = { year: 'numeric', month: 'long', day: 'numeric' };
-          createdAtElement.innerHTML = createdAt.toLocaleDateString(undefined, options);
-        }
+          const createdAtElement = document.createElement('div');
+          createdAtElement.className = 'created-at';
+          const createdAt = new Date(post.createdAt);
+          const now = new Date();
+          const timeDiff = now - createdAt;
 
-        // display delete button only for posts made from your token
-        if (post.userToken === token) {
-          const deleteButton = document.createElement('button');
-          deleteButton.innerHTML = 'Delete';
-          deleteButton.addEventListener('click', () => {
-            deletePost(post.id);
-          });
-          postElement.appendChild(deleteButton);
-        }
-        
-        postElement.appendChild(usernameElement);
-        postElement.appendChild(textElement);
-        postElement.appendChild(likesElement);
-        postElement.appendChild(createdAtElement);
+          if (timeDiff < 60000) {
+            createdAtElement.innerHTML = 'Just now';
+          } else if (timeDiff < 3600000) {
+            const minutes = Math.floor(timeDiff / 60000);
+            createdAtElement.innerHTML = `${minutes} minutes ago`;
+          } else if (timeDiff < 86400000) {
+            const hours = Math.floor(timeDiff / 3600000);
+            createdAtElement.innerHTML = `${hours} hours ago`;
+          } else if (timeDiff < 172800000) {
+            createdAtElement.innerHTML = 'Yesterday';
+          } else {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            createdAtElement.innerHTML = createdAt.toLocaleDateString(undefined, options);
+          }
 
-          postElement.appendChild(usernameElement);
-          postElement.appendChild(textElement);
-          postElement.appendChild(likesElement);
+          postElement.appendChild(createdAtElement);
 
           postsContainer.appendChild(postElement);
         });
@@ -204,7 +218,6 @@ form.addEventListener('submit', event => {
     createPost(text);
   }
 });
-
 
 // Initial fetch and display of posts
 fetchPosts();

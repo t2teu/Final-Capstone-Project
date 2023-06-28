@@ -234,3 +234,9 @@ color: #ffffff;
   font-size: 12px;
   color: #6e6e6e;
 }
+
+.likes-button {
+  position: relative;
+  margin-left: 550px;
+  top:-30px;  
+}
