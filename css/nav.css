@@ -94,5 +94,65 @@
     background-color: #90c6f2;
     cursor: pointer;
   }
+
+
+  /* drop-up menu button */
+
+  .luna-ocean-text {
+    color: white;
+  }
+  
+  .drop-up-button {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .drop-up-button:hover .drop-up-content {
+    display: block;
+  }
+  
+  .drop-up-menu {
+    margin-top: 105px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .luna-ocean-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .drop-up-content {
+    display: none;
+    position: absolute;
+    margin-bottom: 60px;
+    bottom: 40px;
+    left: 0;
+    z-index: 1;
+    min-width: 160px;
+    padding: 8px 0;
+    background-color: #f9f9f9;
+    border-radius: 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .drop-up-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+
+  }
+  
+  .drop-up-content a:hover {
+    background-color: #ddd;
+
+  }
+  
+  .drop-up-menu:hover .drop-up-content {
+    display: block;
+  }
+  
   
   
