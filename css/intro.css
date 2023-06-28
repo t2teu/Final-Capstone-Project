@@ -6,7 +6,6 @@
     src: url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap');
 }
 
-
 * {
     box-sizing: border-box;
     font-family: 'Overpass Mono', 'sans-serif';
@@ -32,18 +31,46 @@ html, body {
 }
 
 body {
-    padding-top: 56px;
     overflow-x: hidden;
   }
   .container {
     width: 800px;
   }
 
+  @keyframes float {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(-6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(-2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(1.2deg);
+	}
+}
+
 #anemone {
     position: relative;
     font-size: 100px;
     margin-top: 75px;
     margin-left: 570px;
+    animation: float 240s ease 0s infinite normal forwards;
 }
 
 #discuss {
@@ -101,6 +128,23 @@ body {
     font-size: 50px;
 }
 
+body {
+    padding-top: 56px;
+}
+
 .navbar {
     margin-left: 100px;
 }
+
+h6 {    
+    margin-top: 5350px;
+    opacity: 0%
+}
+
+.hidden-audio {
+    display: none;
+  }
+
+.navbar-brand {
+    animation: float 60s ease 0s infinite alternate-reverse both;
+  }
