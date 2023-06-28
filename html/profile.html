@@ -9,11 +9,15 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/garden.css">
   <link rel="stylesheet" href="../css/profile.css">
-  <!--PREVENT ACCESS FEATURE-->
-  <script src="/scripts/auth.js"></script>
-  <script>
-      if (isLoggedIn() === false) window.location.replace("login.html");
-  </script>
+    <!--PREVENT ACCESS FEATURE-->
+    <script src="/scripts/auth.js"></script>
+    <script>
+        if (isLoggedIn() === false) {
+          alert("You must be a user to access.")
+          window.location.replace("login.html");};
+    </script>
+      <!--END PREVENT ACCESS FEATURE-->
+      
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 
