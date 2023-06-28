@@ -83,6 +83,11 @@ function fetchPosts() {
     const postsContainer = document.getElementById('posts');
     postsContainer.innerHTML = '';
 
+
+        // Sorts all the posts on the garden by number of likes in descending order
+        data.sort((a, b) => b.likes.length - a.likes.length);
+
+
     // add post data to HTML
     if (data && data.length > 0) {
       data.forEach(post => {
