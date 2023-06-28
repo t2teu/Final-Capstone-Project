@@ -11,21 +11,23 @@
     <!--PREVENT ACCESS FEATURE-->
     <script src="/scripts/auth.js"></script>
     <script>
-        if (isLoggedIn() === false) window.location.replace("login.html");
+        if (isLoggedIn() === false) {
+            alert("You must be a user");
+            window.location.replace("login.html");
+        }
     </script>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon/favicon-16x16.png" type="image/x-icon">
 </head>
 
 <body>
         <div class="row">
             <!-- Left Section -->
-            <div class="col-md-2 outlineColumn" id="leftCol">
+            <div class="col-md-3 outlineColumn" id="leftCol">
 
                 <!-- Left Navbar -->
                 <div id="leftNavbar" class="grid-container">
-                    <div class="col-md-3">
                         <!-- Left Navbar -->
-                        <div id="leftNavbar" class="navbar">
+                        <div id="leftNavbar" class="navbar justify-content-center">
                             <img src="../images/white_logo.png" alt="" srcset="" height="150px">
                             <button id="logoutButton" onclick="logout()"  class="btn btn-outline-dark">Logout</button>
                             <ul class="navbar-nav">
@@ -120,12 +122,11 @@
                                       </a>
                                   </li>
                               </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                </div>
+            </div>
             <!-- Middle Posts Section -->
-            <div class="col-md-7 outlineColumn" id="midCol">
+            <div class="col-md-6 outlineColumn" id="midCol">
                 <div class="container p-5">
                     <h5 id="greetings">Hello,&nbsp;<div id="userHere"></div>!</h5>
                     <h1 class="typewriter">Share your thoughts...</h1>
@@ -136,7 +137,7 @@
                         <div class="mb-3">
                             <textarea id="textInput" class="form-control textarea-style" placeholder="Enter your post..." rows="3" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Post</button>
+                        <button type="submit" class="btn">Post</button>
                     </form>
                 </div>
                 <div id="posts"></div>
