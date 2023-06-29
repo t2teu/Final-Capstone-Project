@@ -123,13 +123,14 @@
   .luna-ocean-text {
     color: white;
   }
-
-  .drop-up-button {
+  
+  .drop-upbutton {
     position: relative;
     cursor: pointer;
   }
   
-  .drop-up-button:hover .drop-up-content {
+  .drop-upbutton:hover .drop-up-content,
+  .drop-upbutton:focus .drop-up-content {
     display: block;
   }
   
@@ -165,17 +166,14 @@
     padding: 12px 16px;
     color: #fafafa;
     text-decoration: none;
-
   }
   
   .drop-up-content a:hover {
     background-color: #ddd;
-
   }
-
-    
-  .drop-up-menu:hover .drop-up-content {
-    transition: all 10s ease; 
+  
+  .drop-up-menu:focus-within .drop-up-content {
+    transition: all 10s ease;
     display: block;
   }
   
