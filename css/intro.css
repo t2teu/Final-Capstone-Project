@@ -185,3 +185,45 @@ h6 {
     margin-top: 5300px;
     opacity: 0;
   }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #1C2C45;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B7C98;
+    border-radius: 10px;
+  }
+  #video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    opacity: 0.3;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  }
+  .animated {
+    -webkit-animation-duration: 10s;animation-duration: 10s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+ }
+ 
+ @-webkit-keyframes fadeOut {
+    0% {opacity: 0.5;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 0.5;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+#logoNav {
+    z-index: 100;
+}
