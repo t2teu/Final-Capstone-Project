@@ -1,5 +1,3 @@
-"use strict";
-
 const gradient = document.querySelector( '.gradient' );
 
 function getPos( ev ){

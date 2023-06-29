@@ -1,7 +1,7 @@
 "use strict";
 
 function atvImg(){
-	var d = document,
+	const d = document,
 		de = d.documentElement,
 		bd = d.getElementsByTagName('body')[0],
 		htm = d.getElementsByTagName('html')[0],
@@ -14,9 +14,9 @@ function atvImg(){
 		return;
 	}
 
-	for(var l=0;l<totalImgs;l++){
+	for(const l=0;l<totalImgs;l++){
 
-		var thisImg = imgs[l],
+		const thisImg = imgs[l],
 			layerElems = thisImg.querySelectorAll('.atvImg-layer'),
 			totalLayerElems = layerElems.length;
 
@@ -28,7 +28,7 @@ function atvImg(){
 			thisImg.removeChild(thisImg.firstChild);
 		}
 	
-		var containerHTML = d.createElement('div'),
+		const containerHTML = d.createElement('div'),
 			shineHTML = d.createElement('div'),
 			shadowHTML = d.createElement('div'),
 			layersHTML = d.createElement('div'),
@@ -40,8 +40,8 @@ function atvImg(){
 		shadowHTML.className = 'atvImg-shadow';
 		layersHTML.className = 'atvImg-layers';
 
-		for(var i=0;i<totalLayerElems;i++){
-			var layer = d.createElement('div'),
+		for(const i=0;i<totalLayerElems;i++){
+			const layer = d.createElement('div'),
 				imgSrc = layerElems[i].getAttribute('data-img');
 
 			layer.className = 'atvImg-rendered-layer';
@@ -57,7 +57,7 @@ function atvImg(){
 		containerHTML.appendChild(shineHTML);
 		thisImg.appendChild(containerHTML);
 
-		var w = thisImg.clientWidth || thisImg.offsetWidth || thisImg.scrollWidth;
+		const w = thisImg.clientWidth || thisImg.offsetWidth || thisImg.scrollWidth;
 		thisImg.style.transform = 'perspective('+ w*3 +'px)';
 
 		if(supportsTouch){
@@ -96,7 +96,7 @@ function atvImg(){
 
 	function processMovement(e, touchEnabled, elem, layers, totalLayers, shine){
 
-		var bdst = bd.scrollTop || htm.scrollTop,
+		const bdst = bd.scrollTop || htm.scrollTop,
 			bdsl = bd.scrollLeft,
 			pageX = (touchEnabled)? e.touches[0].pageX : e.pageX,
 			pageY = (touchEnabled)? e.touches[0].pageY : e.pageY,
@@ -126,8 +126,8 @@ function atvImg(){
 		shine.style.background = 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + (pageY - offsets.top - bdst)/h * 0.4 + ') 0%,rgba(255,255,255,0) 80%)';
 		shine.style.transform = 'translateX(' + (offsetX * totalLayers) - 0.1 + 'px) translateY(' + (offsetY * totalLayers) - 0.1 + 'px)';	
 
-		var revNum = totalLayers;
-		for(var ly=0;ly<totalLayers;ly++){
+		const revNum = totalLayers;
+		for(const ly=0;ly<totalLayers;ly++){
 			layers[ly].style.transform = 'translateX(' + (offsetX * revNum) * ((ly * 2.5) / wMultiple) + 'px) translateY(' + (offsetY * totalLayers) * ((ly * 2.5) / wMultiple) + 'px)';
 			revNum--;
 		}
@@ -139,13 +139,13 @@ function atvImg(){
 
 	function processExit(e, elem, layers, totalLayers, shine){
 
-		var container = elem.firstChild;
+		const container = elem.firstChild;
 
 		container.className = container.className.replace(' over','');
 		container.style.transform = '';
 		shine.style.cssText = '';
 		
-		for(var ly=0;ly<totalLayers;ly++){
+		for(const ly=0;ly<totalLayers;ly++){
 			layers[ly].style.transform = '';
 		}
 
