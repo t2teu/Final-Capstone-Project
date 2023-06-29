@@ -195,3 +195,7 @@ h6 {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
  }
+
+#logoNav {
+    z-index: 100;
+}
