@@ -245,9 +245,9 @@
 
 function animateCounter() {
   const counterElement = document.getElementById("counter");
-  const targetNumber = Math.floor(Math.random() * 1000000); // Generate a random high number
-  const duration = 3000; // Duration of the animation in milliseconds
-  const frameDuration = 1000 / 60; // Duration of each frame in milliseconds
+  const targetNumber = Math.floor(Math.random() * 1000000); // this generates a random high number
+  const duration = 3000; // this is the guration of the animation in milliseconds
+  const frameDuration = 1000 / 60; // and the duration of each frame in milliseconds
   const totalFrames = Math.round(duration / frameDuration);
   let currentFrame = 0;
 
@@ -267,7 +267,7 @@ function animateCounter() {
 function startCounterAnimation() {
   const counterElement = document.getElementById("counter");
   const observerOptions = {
-    threshold: 0.5 // Percentage of the element visible in the viewport to trigger the callback
+    threshold: 0.5 // here's the percentage of the element that then becomes visible in the viewport to trigger the callback
   };
 
   const observer = new IntersectionObserver((entries) => {
