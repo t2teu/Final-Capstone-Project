@@ -1,7 +1,7 @@
 /* Landing Page CSS */
 body {
   color: #ccc;
-  background: #141414;
+  background: #070e17;
   font-family: 'Chivo Mono', monospace;
   }
 
@@ -15,10 +15,15 @@ body {
     padding: 10%;
     background-color: (90deg, rgba(0,0,0,1) 0%, rgba(55,50,62,1) 82%);
 }
+video {
+  width: 50rem;
+  height: 1rem;
+}
 
 #introDisplay {
     border-radius: 20px 0 0 20px;
-    background-image: url("https://images.pexels.com/photos/3684415/pexels-photo-3684415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    /* background-image: url("https://images.pexels.com/photos/3684415/pexels-photo-3684415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+    background-image: url("/images/jellyfishlogin.gif");
     height: auto; 
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
