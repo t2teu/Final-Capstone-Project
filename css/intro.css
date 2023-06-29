@@ -180,3 +180,8 @@ h6 {
       left: -100px;
     }
   }
+
+  #hide {
+    margin-top: 5300px;
+    opacity: 0;
+  }
