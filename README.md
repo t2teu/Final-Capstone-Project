@@ -18,10 +18,9 @@ There is also a secret page that includes the real life livestream of Monterey B
 
 This whole site is the culmination of a creative process and we are very proud of "anemone".
 
-![HOMEPAGE](images/ds1.PNG)
-![EXAMPLEOFONEPRODUCTPAGE](images/ds7.png)
-![CARTPAGE](images/ds2.PNG)
-![CHECKOUTPAGE](images/ds5.png)
-![PURCHASECONFIRMATIONPAGE](images/ds6.png)
-![SIGNUPPAGE](images/ds4.png)
-![SIGNINPAGE](images/ds3.png)
+![INTROPAGE](images/an_1.png)
+![SIGNUPPAGE](images/an_2.png)
+![LOGINPAGE](images/an_3.png)
+![POSTSPAGE](images/an_4.png)
+![PROFILEPAGE](images/an_5.png)
+![ABOUTPAGE](images/an_6.png)
