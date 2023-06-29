@@ -182,11 +182,11 @@ function fetchPosts() {
           } else if (timeDiff < 3600000) {
             // Less than 1 hour ago
             const minutes = Math.floor(timeDiff / 60000);
-            createdAtElement.innerHTML = `${minutes} minutes ago`;
+            createdAtElement.innerHTML = `${minutes}m ago`;
           } else if (timeDiff < 86400000) {
             // Less than 1 day ago
             const hours = Math.floor(timeDiff / 3600000);
-            createdAtElement.innerHTML = `${hours} hours ago`;
+            createdAtElement.innerHTML = `${hours}h ago`;
           } else if (timeDiff < 172800000) {
             // Less than 2 days ago
             createdAtElement.innerHTML = 'Yesterday';
