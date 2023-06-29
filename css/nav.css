@@ -146,13 +146,14 @@
   }
   
   .drop-up-content {
+    text-align: center;
     display: none;
     position: absolute;
     margin-bottom: 60px;
     bottom: 40px;
     left: 0;
     z-index: 1;
-    min-width: 280px;
+    min-width: 240px;
     padding: 8px 8px;
     background-color: #313131;
     border-radius: 9%;
@@ -174,7 +175,7 @@
 
     
   .drop-up-menu:hover .drop-up-content {
-    transition: all 5s ease; 
+    transition: all 10s ease; 
     display: block;
   }
   
