@@ -1,26 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
-  }
+  font-family: Arial, sans-serif;
+}
 
-  .profile {
-    margin: 20px;
-  }
+.profile {
+  margin: 20px;
+}
 
-  .username {
-    font-size: 24px;
-    font-weight: bold;
-  }
+.username {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  .fullName {
-    font-size: 18px;
-    color: #555;
-  }
+.fullName {
+  font-size: 18px;
+  color: #555;
+}
 
-  .about {
-    margin-top: 10px;
-  }
+.about {
+  margin-top: 10px;
+}
 
-  .createdAt {
-    margin-top: 10px;
-    color: #888;
-  }
+.createdAt {
+  margin-top: 10px;
+  color: #888;
+}
+
+#midCol {
+  overflow-y: auto;
+  height: calc(100vh);
+  border-left: 1px solid #2f3336;
+  border-right: 1px solid #2f3336;
+}
+
+/* Follow button */
+#follow-btn {
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: rgb(96, 160, 219);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#follow-btn:hover {
+  background-color: #ffffff;
+  color: rgb(96, 160, 219);
+}
+
+/* Save button */
+#edit-info {
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: rgb(96, 160, 219);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#edit-info:hover {
+  background-color: #ffffff;
+  color: rgb(96, 160, 219);
+}
