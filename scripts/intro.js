@@ -19,4 +19,4 @@ setTimeout(function() {
     clownfish.style.opacity = 0;
     clownfish.style.display = 'none';
   }, 10000);
-}, 30000);
+}, 20000);
