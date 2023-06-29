@@ -71,3 +71,13 @@ body {
   background-color: #ffffff;
   color: rgb(96, 160, 219);
 }
+
+
+/* Hover effects on recent photos */
+.hovereffect {
+  transition: transform .2s;
+}
+
+.hovereffect:hover {
+  transform: scale(0.9);
+}
