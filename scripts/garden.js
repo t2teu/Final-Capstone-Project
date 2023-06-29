@@ -1,3 +1,10 @@
+function getRandomImageLink(width, height) {
+  const randomId = Math.floor(Math.random() * 1000);
+  const imageUrl = `https://picsum.photos/id/${randomId}/${width}/${height}`;
+  
+  return imageUrl;
+}
+
 // Get user token
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');
@@ -44,9 +51,17 @@ function createPost(text) {
     });
 }
 
-// Like a post
 function likePost(postId, likeButton) {
   const token = getUserToken();
+
+  // Check if the post is already liked
+  const likedPosts = JSON.parse(localStorage.getItem('liked-posts')) || [];
+  if (likedPosts.includes(postId)) {
+    // Post already liked, update the heart icon
+    likeButton.innerHTML = '<img src="../images/heart-fill.png" alt="Liked" />';
+    likeButton.disabled = true;
+    return;
+  }
 
   fetch('https://microbloglite.herokuapp.com/api/likes', {
     method: 'POST',
@@ -60,37 +75,15 @@ function likePost(postId, likeButton) {
     .then(data => {
       console.log('Post liked:', data);
       fetchPosts();
-      likeButton.innerHTML = '<img src="../images/heart-fill.svg" alt="Liked" />';
+      likeButton.innerHTML = '<img src="../images/heart-fill.png" alt="Liked" />';
       likeButton.disabled = true;
 
       // Save the liked post ID in localStorage
-      const likedPosts = JSON.parse(localStorage.getItem('liked-posts')) || [];
       likedPosts.push(postId);
       localStorage.setItem('liked-posts', JSON.stringify(likedPosts));
     })
     .catch(error => {
       console.error('Error liking post:', error);
-    });
-}
-
-// Function to delete a post
-function deletePost(postId) {
-  const token = getUserToken();
-
-  fetch(`https://microbloglite.herokuapp.com/api/posts/${postId}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-    }
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Post deleted:', data);
-      fetchPosts();
-    })
-    .catch(error => {
-      console.error('Error deleting post:', error);
     });
 }
 
@@ -130,9 +123,24 @@ function fetchPosts() {
 
           // Create and append profile picture element
           const profilePictureElement = document.createElement('img');
-          profilePictureElement.className = 'profile-picture';
-          profilePictureElement.src = `https://www.gravatar.com/avatar/${post.emailHash}`;
-          postElement.appendChild(profilePictureElement);
+            profilePictureElement.className = 'profile-picture';
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'delete-button';
+            deleteButton.innerHTML = 'Delete';
+            deleteButton.addEventListener('click', () => {
+              deletePost(post._id);
+            });
+
+            const width = 200;
+            const height = 200;
+
+            // Generate a random image link
+            const imageUrl = getRandomImageLink(width, height);
+
+            profilePictureElement.src = imageUrl;
+            postElement.appendChild(profilePictureElement);
+            
 
           const textElement = document.createElement('div');
           textElement.innerHTML = post.text;
@@ -144,10 +152,10 @@ function fetchPosts() {
           likeButton.className = 'like-button';
           const userLiked = post.likes.includes(token);
           if (userLiked) {
-            likeButton.innerHTML = '<img src="../images/heart-fill.svg" alt="Liked" />';
+            likeButton.innerHTML = '<img src="../images/heart-fill.png" alt="Liked" />';
             likeButton.disabled = true;
           } else {
-            likeButton.innerHTML = '<img src="../images/heart.svg" alt="Like" />';
+            likeButton.innerHTML = '<img src="../images/heart.png" alt="Like" />';
             likeButton.addEventListener('click', () => {
               likePost(post._id, likeButton);
             });
@@ -159,8 +167,8 @@ function fetchPosts() {
 
           likesElement.appendChild(likeButton);
           likesElement.appendChild(likesCountElement);
+        
           
-
           // Calculate time elapsed since the post was created
           const createdAtElement = document.createElement('div');
           createdAtElement.className = 'created-at';
@@ -188,23 +196,19 @@ function fetchPosts() {
             createdAtElement.innerHTML = createdAt.toLocaleDateString(undefined, options);
           }
 
+          
+
           // Append the createdAtElement after the usernameElement
           postElement.appendChild(usernameElement);
           postElement.appendChild(createdAtElement);
           postElement.appendChild(textElement);
           postElement.appendChild(likesElement);
+          postElement.appendChild(deleteButton);
 
-          // Display delete button only for posts made from your token
-          if (post.userToken === token) {
-            const deleteButton = document.createElement('button');
-            deleteButton.innerHTML = 'Delete';
-            deleteButton.addEventListener('click', () => {
-              deletePost(post._id);
-            });
-            postElement.appendChild(deleteButton);
-          }
-
+        
           postsContainer.appendChild(postElement);
+          postsContainer.appendChild(postElement);
+          
         });
       } else {
         console.error('No posts found');
@@ -212,6 +216,26 @@ function fetchPosts() {
     })
     .catch(error => {
       console.error('Error:', error);
+    });
+}
+
+function deletePost(postId) {
+  const token = getUserToken();
+
+  fetch(`https://microbloglite.herokuapp.com/api/posts/${postId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Post deleted:', data);
+      fetchPosts();
+    })
+    .catch(error => {
+      console.error('Error deleting post:', error);
     });
 }
 

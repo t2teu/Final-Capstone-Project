@@ -1,5 +1,3 @@
-"use strict";
-
 const gradient = document.querySelector( '.gradient' );
 
 function getPos( ev ){
@@ -11,3 +9,14 @@ function getPos( ev ){
 }
 addEventListener( 'mousemove', getPos, false );
 
+setTimeout(function() {
+  const clownfish = document.getElementById('clownfish');
+  clownfish.style.animation = 'slide-in 1s forwards';
+  clownfish.style.opacity = 1;
+
+  setTimeout(function() {
+    clownfish.style.animation = 'slide-out 1s forwards';
+    clownfish.style.opacity = 0;
+    clownfish.style.display = 'none';
+  }, 10000);
+}, 30000);

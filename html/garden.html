@@ -90,13 +90,16 @@
                                       <li class="nav-item">
                                         <!-- Luna Ocean Drop-up Menu -->
                                         <div class="drop-up-menu">
-                                          <a href="#" class="drop-upbutton" onclick="toggleDropUpContent()">
+                                          <a href="#" class="drop-upbutton" onclick="toggleDropUpContent(event)">
                                             <img src="/images/luna.png" alt="Luna Ocean" class="luna-ocean-image">
                                             <span class="luna-ocean-text">&nbsp;Luna Ocean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; •••</span>
                                           </a>
-                                          <div id="myDropUpContent" class="drop-up-content">
-                                            <button class="btn btn-outline-dark" style="width: 240px;">Add Account</button>
-                                            <button id="logoutButton" onclick="logout()" class="btn btn-outline-dark" style="width: 240px;">Logout</button>
+                                          <div class="drop-up-content">
+
+                                            <button class="btn btn-outline-dark">Add Account</button>
+
+                                              <button id="logoutButton" onclick="logout()" class="btn btn-outline-dark">Logout</button>
+
                                           </div>
                                         </div>
                                       </li>
@@ -125,23 +128,27 @@
                         <div class="filter-container">
                             <label for="filter-select">Filter:</label>
                             <select id="filter-select">
-                              <option value="likes">Most Liked</option>
-                              <option value="timestamp">Most Recent</option>
+                              <option value="likes">Most Likes</option>
+                              <option value="timestamp">Most Recently Posted</option>
                             </select>
                         </div>
 
                     </form>
                 </div>
-                <div id="posts"></div>
+                <div id="posts">
+                </div>
             </div>
             <!-- Right Trending Section -->
             <div class="col-md-3 outlineColumn p-5" id="rightCol">
                 <div id="trendingSection">
-                    <h2>Today's Top Songs</h2>
+                    <h2>Top 50 Songs - USA</h2>
                     <div id="tracks-container"></div>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5j0o3XQ1YciVzm7MtcFmfG?utm_source=generator&theme=0" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br><br>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp?utm_source=generator&theme=0" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp?utm_source=generator&theme=0" width="100%" height="650" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Most Popular Songs of the Year</h2>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5j0o3XQ1YciVzm7MtcFmfG?utm_source=generator&theme=0" width="100%" height="650" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br><br>               
                 </div>
             </div>
         </div>
