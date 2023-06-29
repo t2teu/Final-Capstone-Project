@@ -152,3 +152,31 @@ h6 {
   .hidden-audio {
     display: none;
   }
+
+  #clownfish {
+    position: absolute;
+    left: -600px;
+    top: 750%;
+    transition: left 2s ease-in-out;
+    width: 200px;
+    height: 150px;
+    opacity: 0;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100px;
+    }
+  }

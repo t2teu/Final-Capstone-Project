@@ -1,3 +1,10 @@
+function getRandomImageLink(width, height) {
+  const randomId = Math.floor(Math.random() * 1000);
+  const imageUrl = `https://picsum.photos/id/${randomId}/${width}/${height}`;
+  
+  return imageUrl;
+}
+
 // Get user token
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');
@@ -44,9 +51,17 @@ function createPost(text) {
     });
 }
 
-// Like a post
 function likePost(postId, likeButton) {
   const token = getUserToken();
+
+  // Check if the post is already liked
+  const likedPosts = JSON.parse(localStorage.getItem('liked-posts')) || [];
+  if (likedPosts.includes(postId)) {
+    // Post already liked, update the heart icon
+    likeButton.innerHTML = '<img src="../images/heart-fill.svg" alt="Liked" />';
+    likeButton.disabled = true;
+    return;
+  }
 
   fetch('https://microbloglite.herokuapp.com/api/likes', {
     method: 'POST',
@@ -64,7 +79,6 @@ function likePost(postId, likeButton) {
       likeButton.disabled = true;
 
       // Save the liked post ID in localStorage
-      const likedPosts = JSON.parse(localStorage.getItem('liked-posts')) || [];
       likedPosts.push(postId);
       localStorage.setItem('liked-posts', JSON.stringify(likedPosts));
     })
@@ -130,9 +144,18 @@ function fetchPosts() {
 
           // Create and append profile picture element
           const profilePictureElement = document.createElement('img');
-          profilePictureElement.className = 'profile-picture';
-          profilePictureElement.src = `https://www.gravatar.com/avatar/${post.emailHash}`;
-          postElement.appendChild(profilePictureElement);
+            profilePictureElement.className = 'profile-picture';
+
+            // Set the dimensions for the image (e.g., 200x200)
+            const width = 200;
+            const height = 200;
+
+            // Generate a random image link
+            const imageUrl = getRandomImageLink(width, height);
+
+            profilePictureElement.src = imageUrl;
+            postElement.appendChild(profilePictureElement);
+            
 
           const textElement = document.createElement('div');
           textElement.innerHTML = post.text;

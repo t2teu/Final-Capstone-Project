@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .video-container {
+    width: 530px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+  }
+  
