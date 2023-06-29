@@ -152,3 +152,15 @@ h6 {
   .hidden-audio {
     display: none;
   }
+
+  /* Custom ScrollBar */
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #1C2C45;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B7C98;
+    border-radius: 10px;
+  }
