@@ -1,8 +1,9 @@
 /* User Registration Page CSS */
 
+
 .loginContainer {
   border-radius: 20px;
-  background: radial-gradient(circle, hsla(265, 11%, 22%, 1) 0%, hsla(260, 10%, 17%, 1) 53%, hsla(0, 0%, 0%, 1) 100%);
+  background: radial-gradient(circle, rgb(169, 149, 200) 0%, rgb(16, 12, 51) 53%, hsla(0, 0%, 0%, 1) 100%);
   filter: drop-shadow(.5rem .5rem 1rem black);
 }
 
@@ -12,10 +13,21 @@
 
 #introDisplay {
     border-radius: 20px 0 0 20px;
-    background-image: url("/images/anem_phone.png");
+    /* background-image: url("/images/anem_phone.png"); */
     height: auto;
-    background-size: cover; 
-    background-position: center;
+    position: relative;
+    overflow: hidden;
+    /* background-size: cover; 
+    background-position: center; */
+}
+
+#introDisplay video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 p {

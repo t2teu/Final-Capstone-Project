@@ -136,18 +136,19 @@ h6 {
     opacity: 70%;
   }
   
-  /* Custom ScrollBar */
+/* Custom ScrollBar */
 
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #1C2C45;
-  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #23374F;
+  background-color: #4B7C98;
   border-radius: 10px;
 }
+
+
 #greetings {
 display: flex;
 justify-content: center;

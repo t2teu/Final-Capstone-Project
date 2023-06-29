@@ -103,13 +103,7 @@
       
     </header>
 
-    <div class="counter-wrapper">
-      <span>Total Users Signed Up:</span>
-      <div id="counter" class="counter">0</div>
-    </div>
-    
-
-    <main class="container">
+    <main class="container custom-container">
         <div class="loginContainer text-center mt-5 animate__animated animate__slideInLeft">
             <div class="row">
               <div class="col-6 loginColumn" id="introDisplay">
@@ -161,6 +155,14 @@
             </div>
           </div>
           </main><br>
+
+          <div class="counter-wrapper">
+            <h2>Total Users Signed Up:</h2>
+            <div id="counter" class="counter">0</div>
+          </div>
+          <center><h2>_____________________________________</h2></center>
+
+          <br>
           <section class="container">
             <div class="row justify-content-center align-items-center g-6 p-5 text-justify">
               <div class="col-4">
@@ -258,7 +260,26 @@ function animateCounter() {
   }, frameDuration);
 }
 
-animateCounter();
+function startCounterAnimation() {
+  const counterElement = document.getElementById("counter");
+  const observerOptions = {
+    threshold: 0.5 // Percentage of the element visible in the viewport to trigger the callback
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter();
+        observer.unobserve(counterElement);
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(counterElement);
+}
+
+startCounterAnimation();
+
 
     </script>
 
@@ -267,6 +288,7 @@ animateCounter();
 
     <!-- Page-specific code -->
     <script src="/scripts/landing.js"></script>
+    <script src="/scripts/vid.js"></script>
 
     <!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
