@@ -1,5 +1,3 @@
-"use strict";
-
 // Get user token
 function getUserToken() {
   const loginData = localStorage.getItem('login-data');
@@ -46,6 +44,35 @@ function createPost(text) {
     });
 }
 
+// Like a post
+function likePost(postId, likeButton) {
+  const token = getUserToken();
+
+  fetch('https://microbloglite.herokuapp.com/api/likes', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ postId })
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Post liked:', data);
+      fetchPosts();
+      likeButton.innerHTML = '<img src="../images/heart-fill.svg" alt="Liked" />';
+      likeButton.disabled = true;
+
+      // Save the liked post ID in localStorage
+      const likedPosts = JSON.parse(localStorage.getItem('liked-posts')) || [];
+      likedPosts.push(postId);
+      localStorage.setItem('liked-posts', JSON.stringify(likedPosts));
+    })
+    .catch(error => {
+      console.error('Error liking post:', error);
+    });
+}
+
 // Function to delete a post
 function deletePost(postId) {
   const token = getUserToken();
@@ -84,7 +111,7 @@ function fetchPosts() {
       const postsContainer = document.getElementById('posts');
       postsContainer.innerHTML = '';
 
-      // sorts posts based on the time it was posted or number of likes
+      // Sort posts based on the time it was posted or number of likes
       if (selectedFilter === 'likes') {
         data.sort((a, b) => b.likes.length - a.likes.length); // Sort by most likes
       } else if (selectedFilter === 'timestamp') {
@@ -112,17 +139,27 @@ function fetchPosts() {
 
           const likesElement = document.createElement('div');
           likesElement.className = 'likes';
-          likesElement.innerHTML = `Likes: ${post.likes.length}`;
 
-          // Display delete button only for posts made from your token
-          if (post.userToken === token) {
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
-            deleteButton.addEventListener('click', () => {
-              deletePost(post.id);
+          const likeButton = document.createElement('button');
+          likeButton.className = 'like-button';
+          const userLiked = post.likes.includes(token);
+          if (userLiked) {
+            likeButton.innerHTML = '<img src="../images/heart-fill.svg" alt="Liked" />';
+            likeButton.disabled = true;
+          } else {
+            likeButton.innerHTML = '<img src="../images/heart.svg" alt="Like" />';
+            likeButton.addEventListener('click', () => {
+              likePost(post._id, likeButton);
             });
-            postElement.appendChild(deleteButton);
           }
+
+          const likesCountElement = document.createElement('span');
+          likesCountElement.className = 'likes-count';
+          likesCountElement.innerHTML = post.likes.length;
+
+          likesElement.appendChild(likeButton);
+          likesElement.appendChild(likesCountElement);
+          
 
           // Calculate time elapsed since the post was created
           const createdAtElement = document.createElement('div');
@@ -133,38 +170,39 @@ function fetchPosts() {
 
           if (timeDiff < 60000) {
             // Less than 1 minute ago
-            createdAtElement.textContent = 'Just now';
+            createdAtElement.innerHTML = 'Just now';
           } else if (timeDiff < 3600000) {
             // Less than 1 hour ago
             const minutes = Math.floor(timeDiff / 60000);
-            createdAtElement.textContent = `${minutes} minutes ago`;
+            createdAtElement.innerHTML = `${minutes} minutes ago`;
           } else if (timeDiff < 86400000) {
             // Less than 1 day ago
             const hours = Math.floor(timeDiff / 3600000);
-            createdAtElement.textContent = `${hours} hours ago`;
+            createdAtElement.innerHTML = `${hours} hours ago`;
           } else if (timeDiff < 172800000) {
             // Less than 2 days ago
-            createdAtElement.textContent = 'Yesterday';
+            createdAtElement.innerHTML = 'Yesterday';
           } else {
             // More than 2 days ago
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            createdAtElement.textContent = createdAt.toLocaleDateString(undefined, options);
+            createdAtElement.innerHTML = createdAt.toLocaleDateString(undefined, options);
           }
 
-          // display delete button only for posts made from your token
+          // Append the createdAtElement after the usernameElement
+          postElement.appendChild(usernameElement);
+          postElement.appendChild(createdAtElement);
+          postElement.appendChild(textElement);
+          postElement.appendChild(likesElement);
+
+          // Display delete button only for posts made from your token
           if (post.userToken === token) {
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
+            deleteButton.innerHTML = 'Delete';
             deleteButton.addEventListener('click', () => {
-              deletePost(post.id);
+              deletePost(post._id);
             });
             postElement.appendChild(deleteButton);
           }
-
-          postElement.appendChild(usernameElement);
-          postElement.appendChild(textElement);
-          postElement.appendChild(likesElement);
-          postElement.appendChild(createdAtElement);
 
           postsContainer.appendChild(postElement);
         });

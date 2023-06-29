@@ -228,3 +228,26 @@ transform: translateX(-20px) translateY(-45px);
   border: none;
   border-radius: 5px;
 }
+
+.post {
+  position: relative;
+}
+
+.created-at {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  font-size: 0.8em;
+  color: gray;
+}
+
+.like-button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  margin-right: 8px;
+}
