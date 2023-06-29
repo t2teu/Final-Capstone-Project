@@ -149,9 +149,6 @@ h6 {
     animation: float 60s ease 0s infinite alternate-reverse both;
   }
 
-  .hidden-audio {
-    display: none;
-  }
 
   /* Custom ScrollBar */
 
