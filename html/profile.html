@@ -103,49 +103,49 @@
               </div>
           </div>
             <div class="col-md-6">
-                
+            <h5 id="greetings" style="transform: translateX(-330px);">Hello,&nbsp;<div id="userHere"></div>!</h5>          
                 <!-- Middle Posts Section -->
                         <!-- Profile Section -->
-                        <section class="h-100 gradient-custom-2" style="margin-left: -85px">
-                          <div class="container" >
+                        <section class="h-100 gradient-custom-2" style="margin-left: -185px">
+                          <div class="container">
                             <div class="row d-flex justify-content-center h-100">
                               <div class="card" style="background-color: #141414;">
                                 <div class="rounded-top text-white d-flex flex-row" style="background-color: #141414; height:200px;">
                                   <div class="col-3 d-flex flex-column align-items-center">
                                     <div class="dropdown" style="position: absolute; top: 20px; right: 20px;">
-                                      <button id="edit-profile-dropdown" class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="z-index: 1;">
-                                        Edit Profile
-                                      </button>
+                                      <button id="edit-profile-dropdown" class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="z-index: 1;"> Edit Profile </button>
                                       <div class="dropdown-menu" aria-labelledby="edit-profile-dropdown">
                                         <a class="dropdown-item" href="#">Change profile photo</a>
+                                        <a class="dropdown-item" href="#">Profile theme</a>
                                         <a class="dropdown-item" href="#">Privacy settings</a>
-                                        <a class="dropdown-item" href="#">Theme</a>
                                       </div>
                                     </div>
-                                    <img src="/images/luna.png" alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2 rounded-circle" style="width: 150px; z-index: 1">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                      <img src="/images/luna.png" alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2 rounded-circle" style="width: 150px; z-index: 1">
+                                    </a>
                                   </div>
                                   <div class="col-9 d-flex flex-column align-items-start justify-content-center">
                                     <h5 class="mb-0">Luna Ocean</h5>
                                     <p class="mb-0">Bay Area, CA</p>
+                                    <button id="follow-btn" class="btn btn-primary" onclick="followUser()">Follow</button>
                                   </div>
                                 </div>
                                 <div class="p-4 text-black" style="background-color: #141414;">
                                   <div class="row justify-content-end text-center py-1">
                                     <div class="col" style="color: rgb(96, 160, 219)">
-                                      <p class="mb-1 h5">253</p>
+                                      <a href="#" class="mb-1 h5 text-decoration-none" style="color: inherit; transition: color 0.3s;" onmouseover="this.style.color='rgb(255, 255, 255)';" onmouseout="this.style.color='rgb(96, 160, 219)';">253</a>
                                       <p class="small text-muted mb-0">Photos</p>
                                     </div>
                                     <div class="col" style="color: rgb(96, 160, 219)">
-                                      <p class="mb-1 h5">32.6k</p>
+                                      <a href="#" class="mb-1 h5 text-decoration-none" style="color: inherit; transition: color 0.3s;" onmouseover="this.style.color='rgb(255, 255, 255)';" onmouseout="this.style.color='rgb(96, 160, 219)';">32.6k</a>
                                       <p class="small text-muted mb-0">Followers</p>
                                     </div>
                                     <div class="col" style="color: rgb(96, 160, 219)">
-                                      <p class="mb-1 h5">478</p>
+                                      <a href="#" class="mb-1 h5 text-decoration-none" style="color: inherit; transition: color 0.3s;" onmouseover="this.style.color='rgb(255, 255, 255)';" onmouseout="this.style.color='rgb(96, 160, 219)';">478</a>
                                       <p class="small text-muted mb-0">Following</p>
                                     </div>
                                   </div>
                                 </div>
-                                <br><br>
                                 <div class="card-body p-4 text-black">
                                   <div class="row mb-5">
                                     <div class="col" style="color: rgb(255, 255, 255)">
@@ -172,41 +172,52 @@
                                             <label for="badges"></label>
                                             <input type="text" class="form-control" id="Bio" placeholder="Bio">
                                           </div>
-                                          <button style="color: rgb(96, 160, 219)" id="edit-info" type="submit" class="btn btn-primary">Save</button>
+                                          <button style="color: rgb(255, 255, 255)" id="edit-info" type="submit" class="btn btn-primary">Save</button>
                                         </form>
                                       </div>
                                     </div>
-                      
-                      <div class="d-flex justify-content-between align-items-center mb-4" style="color: white;">
-                        <p class="lead fw-normal mb-0">Recent photos</p>
-                        <p class="mb-0"><a href="#!" class="text-white">Show all</a></p>
-                      </div>
-                      <div class="row g-2">
-                        <div class="col mb-2">
-                          <img src="https://images.pexels.com/photos/1545582/pexels-photo-1545582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
-                        </div>
-                        <div class="col mb-2">
-                          <img src="https://images.pexels.com/photos/1545589/pexels-photo-1545589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
-                        </div>
-                      </div>
-                      <div class="row g-2">
-                        <div class="col">
-                          <img src="https://images.pexels.com/photos/139975/pexels-photo-139975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
-                        </div>
-                        <div class="col">
-                          <img src="https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
-                        </div>
-                      </div>
-                    </div>
-                  </div><div class="col col-lg-9 col-xl-7">
-                  
-                </div>
-              </div>
-            </div>
-         
-            <div class="col-md-3"> 
-
-            </section>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                          <div class="modal-body">
+                                            <img src="/images/luna.png" class="img-fluid rounded mx-auto d-block" alt="...">
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-4" style="color: white;">
+                                      <p class="lead fw-normal mb-0">Recent photos</p>
+                                      <p class="mb-0">
+                                        <a href="#!" class="text-white">Show all</a>
+                                      </p>
+                                    </div>
+                                    <div class="row g-2">
+                                      <div class="col mb-2">
+                                        <img src="https://images.pexels.com/photos/1545582/pexels-photo-1545582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
+                                      </div>
+                                      <div class="col mb-2">
+                                        <img src="https://images.pexels.com/photos/1545589/pexels-photo-1545589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
+                                      </div>
+                                    </div>
+                                    <div class="row g-2">
+                                      <div class="col">
+                                        <img src="https://images.pexels.com/photos/139975/pexels-photo-139975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
+                                      </div>
+                                      <div class="col">
+                                        <img src="https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 1" class="w-100 rounded-3">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col col-lg-9 col-xl-7"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                        </section>
                 <!-- Right Trending Section -->
                 
             

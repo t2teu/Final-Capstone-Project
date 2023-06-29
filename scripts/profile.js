@@ -35,7 +35,7 @@ function formatDate(dateString) {
 // >>>>>>>>>>>>>EDIT INFO SECTION FOR PROFILE PAGE<<<<<<<<<<<<<<<<
 
 // Add event listener to the Edit Profile button
-const editProfileButton = document.getElementById('edit-info');
+var editProfileButton = document.getElementById('edit-info');
 editProfileButton.addEventListener('click', updateProfile);
 
 // Function to handle profile update
@@ -43,12 +43,12 @@ function updateProfile(event) {
   event.preventDefault();
 
   // Get the updated profile information from the form fields
-  const updatedFullName = document.getElementById('Full Name').value;
-  const updatedUserName = document.getElementById('User Name').value;
-  const updatedBio = document.getElementById('Bio').value;
+  var updatedFullName = document.getElementById('Full Name').value;
+  var updatedUserName = document.getElementById('User Name').value;
+  var updatedBio = document.getElementById('Bio').value;
 
   // Prepare the data to be sent to the API
-  const data = {
+  var data = {
     fullName: updatedFullName,
     userName: updatedUserName,
     bio: updatedBio
@@ -77,4 +77,21 @@ function updateProfile(event) {
     console.error('Error fetching user profile:', error);
   });
 }
+
+
+// >>>>>>>>>>>>>>>Follow button<<<<<<<<<<<<<<<
+function followUser() {
+  var btn = document.getElementById('follow-btn');
+  if (btn.innerHTML === "Follow") {
+      btn.innerHTML = "Following";
+      btn.style.backgroundColor = "#ffffff";
+      btn.style.color = "rgb(96, 160, 219)";
+  } else {
+      btn.innerHTML = "Follow";
+      btn.style.backgroundColor = "rgb(96, 160, 219)";
+      btn.style.color = "#ffffff";
+  }
+}
+
+
 
