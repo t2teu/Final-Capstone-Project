@@ -1,4 +1,4 @@
-# Capstone Project
+# Final Capstone Project
 Week 12 Capstone Project of "anemone", a music discussion platform for Mailjard's class
  
 (To download the code, click on the Release link up and to the right)
